@@ -8082,8 +8082,7 @@ a.text-dark:hover {
 }
 
 .hide_alt > * {
-    flex: 0 0 66.666667%;
-    max-width: 66.666667%;
+
     font-size: 14px;
     text-align: left;
     list-style-type: none;
