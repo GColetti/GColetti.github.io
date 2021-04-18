@@ -8037,6 +8037,64 @@ a.text-dark:hover {
     visibility: visible!important
 }
 
+
 .invisible {
     visibility: hidden!important
+}
+
+/* Hide element */
+.hide:hover .hide-item,
+.hide:focus .hide-item {
+    filter: none !important;
+}
+
+.hide_alt:hover .hide-item,
+.hide_alt:focus .hide-item {
+    filter: none !important;
+}
+
+/* other styles */
+.hide {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.hide_alt {
+    display: flex;
+    justify-content: left;
+    padding: 0.5;
+    height: 3em;
+    margin: 0;
+  }
+
+.hide > * {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    font-size: 14px;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    border-radius: 0;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.hide_alt > * {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    font-size: 14px;
+    text-align: left;
+    list-style-type: none;
+    margin: 0;
+    border-radius: 0;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.hide-item {
+    filter: blur(2.5px);
+    cursor: none;
+    list-style-type: none;
 }
