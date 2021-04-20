@@ -941,7 +941,7 @@
 .datepicker table tr td.active:hover[disabled] div,
 .datepicker table tr td.active.disabled[disabled] div,
 .datepicker table tr td.active.disabled:hover[disabled] div {
-  background-color: #18308F; }
+  background-color: #0f1f59; }
 
 .datepicker table tr td.active:active,
 .datepicker table tr td.active:hover:active,
@@ -951,7 +951,7 @@
 .datepicker table tr td.active:hover.active,
 .datepicker table tr td.active.disabled.active,
 .datepicker table tr td.active.disabled:hover.active {
-  background-color: #003399 \9; }
+  background-color: #0f1f59; }
 
 .datepicker table tr td span {
   display: block;
@@ -1001,7 +1001,7 @@
 .datepicker table tr td span.active:hover[disabled],
 .datepicker table tr td span.active.disabled[disabled],
 .datepicker table tr td span.active.disabled:hover[disabled] {
-  background-color: #18308F;
+  background-color: #0f1f59;
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.2); }
 
 .datepicker table tr td span.active:active,
@@ -1012,7 +1012,7 @@
 .datepicker table tr td span.active:hover.active,
 .datepicker table tr td span.active.disabled.active,
 .datepicker table tr td span.active.disabled:hover.active {
-  background-color: #003399 \9; }
+  background-color: #0f1f59; }
 
 .datepicker table tr td span.old,
 .datepicker table tr td span.new {
@@ -1254,7 +1254,7 @@
     top: 1px; }
 
 .btn-primary {
-  background-color: #18308F;
+  background-color: #0f1f59;
   color: #FFFFFF; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary.active:focus, .btn-primary.active:hover,
   .show > .btn-primary.dropdown-toggle,
@@ -1272,21 +1272,21 @@
   fieldset[disabled] .btn-primary.focus,
   fieldset[disabled] .btn-primary:active,
   fieldset[disabled] .btn-primary.active {
-    background-color: #18308F;
-    border-color: #18308F; }
+    background-color: #0f1f59;
+    border-color: #0f1f59; }
   .btn-primary.btn-simple {
-    color: #18308F;
-    border-color: #18308F; }
+    color: #0f1f59;
+    border-color: #0f1f59; }
     .btn-primary.btn-simple:hover, .btn-primary.btn-simple:focus, .btn-primary.btn-simple:active {
       background-color: transparent;
-      color: #18308F;
-      border-color: #18308F;
+      color: #0f1f59;
+      border-color: #0f1f59;
       box-shadow: none; }
   .btn-primary.btn-link {
-    color: #18308F; }
+    color: #0f1f59; }
     .btn-primary.btn-link:hover, .btn-primary.btn-link:focus, .btn-primary.btn-link:active {
       background-color: transparent;
-      color: #18308F;
+      color: #0f1f59;
       text-decoration: none;
       box-shadow: none; }
 
