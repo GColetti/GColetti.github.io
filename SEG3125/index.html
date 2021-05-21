@@ -1,10 +1,227 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+
+    <!-- TITLE ENTRY -->
+	<title>
+		SEG3125 Survey
+	</title>
+
+    <!-- CSS STYLES -->
+	<style>
+
+		/* BODY STYLE*/
+		body {
+			background-color: #202020;
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* FORM STYLE */
+		form {
+			background-color: #202020;
+			max-width: 1100px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* BUTTON STYLE */
+		button {
+			background-color: #00ceff;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+
+        /* H1 STYLE */
+        h1 {
+            color: white;
+        }
+
+        /* BODY TEXT STYLE */
+        body {
+            color: white;
+        }
+
+        /* HEADING STYLE */
+        body {
+            font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+            background-color: white;
+        }
+
+        .gradient-multiline {
+            position: relative;
+            width: 300px;
+            margin: 40px auto;
+            font-size: 40px;
+            background-color: white;
+            text-align: center;
+            line-height: 1.5em;
+            overflow:hidden;
+        }
+            
+        .gradient-multiline span {
+            color: #fff;
+            background-color: #000;
+            padding: 0.225rem 0.5rem;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+        }
+
+            @supports(mix-blend-mode: lighten) {
+            
+            .gradient-multiline::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                pointer-events: none;
+                background: linear-gradient(60deg, #3629a2, #00ceff);
+                mix-blend-mode: lighten;
+            }
+            
+        }
+
+        /* SUBMIT BUTTON */
+        .btn-grad {background-image: linear-gradient(to right, #3629a2 0%, #00ceff  60%, #3629a2  100%)}
+         .btn-grad {
+            margin: 0 auto;
+            padding: 15px 0px;
+            width: 250px;
+            text-align: center;
+            font-family: inherit;
+            font-weight: bold;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            display: block;
+            text-decoration: none;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
+
+	</style>
+</head>
+
 <body>
+    <h2 class="gradient-multiline"><span>SEG3125 Survey</span></h2>
 
-<h1>SEG3125</h1>
-<p>This is my work for SEG3125 Summer 2021
-</p>
+	<!-- FORM INSTANTIATION -->
+	<form id="form">
 
+		
+        <!-- QUESTION 1 -->
+		<div class="form-control">
+			<label>
+				Question 1
+			</label>
+
+			<!-- Input Type Radio Button -->
+			<label for="recommed-1">
+				<input type="radio"
+					id="recommed-1"
+					name="recommed">Yes</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio"
+					id="recommed-2"
+					name="recommed">No</input>
+			</label>
+			<label for="recommed-3">
+				<input type="radio"
+					id="recommed-3"
+					name="recommed">Maybe</input>
+			</label>
+		</div>
+
+        <!-- QUESTION 2 -->
+        <div class="form-control">
+			<label>
+				Question 2
+			</label>
+
+			<!-- Input Type Radio Button -->
+			<label for="recommed-1">
+				<input type="radio"
+					id="recommed-1"
+					name="recommed">Yes</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio"
+					id="recommed-2"
+					name="recommed">No</input>
+			</label>
+			<label for="recommed-3">
+				<input type="radio"
+					id="recommed-3"
+					name="recommed">Maybe</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label> Multi Select Question 
+				<small></small>
+			</label>
+
+			<!-- Input Type Checkbox -->
+			<label for="inp-1">
+				<input type="checkbox"
+					name="inp">C</input></label>
+			<label for="inp-2">
+				<input type="checkbox"
+					name="inp">C++</input></label>
+			<label for="inp-3">
+				<input type="checkbox"
+					name="inp">C#</input></label>
+		</div> 
+
+        <a href="#" class="btn-grad ">Submit</a>
+	</form>
 </body>
+
 </html>
