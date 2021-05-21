@@ -18,7 +18,7 @@
 		/* BODY STYLE*/
 		body {
 			background-color: #202020;
-			font-family: Verdana;
+			font-family: inherit;
 			text-align: center;
 		}
 
@@ -37,10 +37,11 @@
 			margin-bottom: 25px;
 		}
 
-		/* Styling form-control Label */
+		/* LABEL STYLE */
 		.form-control label {
 			display: block;
 			margin-bottom: 10px;
+            font-size: larger;
 		}
 
 		.form-control input,
@@ -123,15 +124,15 @@
         }
 
         /* SUBMIT BUTTON */
-        .btn-grad {background-image: linear-gradient(to right, #3629a2 0%, #00ceff  60%, #3629a2  100%)}
+        .btn-grad {background-image: linear-gradient(to right, #3629a2 10%, #00ceff  60%, #3629a2  100%)}
          .btn-grad {
             margin: 0 auto;
             padding: 15px 0px;
-            width: 250px;
+            width: 200px;
             text-align: center;
             font-family: inherit;
             font-weight: bold;
-            transition: 0.5s;
+            transition: 1s;
             background-size: 200% auto;
             color: white;            
             display: block;
@@ -143,7 +144,354 @@
             color: #fff;
             text-decoration: none;
           }
+
+        
+        .control-group {
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 15px;
+        }
+
+        /* RADIO BUTTON STYLE */
+        .control {
+            text-align: left;
+			font-family: inherit;
+            display: block;
+            position: relative;
+            padding-left: 30px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding-top: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .control input {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+        }
+        .control_indicator {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background: #ffffff;
+            border: 0px groove #000000;
+            border-radius: undefinedpx;
+        }
+        .control:hover input ~ .control_indicator,
+        .control input:focus ~ .control_indicator {
+            background: #ffffff;
+        }
+
+        .control input:checked ~ .control_indicator {
+            background: #00ceff;
+        }
+        .control:hover input:not([disabled]):checked ~ .control_indicator,
+        .control input:checked:focus ~ .control_indicator {
+            background: #00ceff;
+        }
+        .control input:disabled ~ .control_indicator {
+            background: #ffffff;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        .control_indicator:after {
+            box-sizing: unset;
+            content: '';
+            position: absolute;
+            display: none;
+        }
+        .control input:checked ~ .control_indicator:after {
+            display: block;
+        }
+        .control-radio .control_indicator {
+            border-radius: 50%;
+        }
+
+        .control-radio .control_indicator:after {
+            left: 7px;
+            top: 7px;
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #ffffff;
+            transition: 250ms;
+        }
+        .control-radio input:disabled ~ .control_indicator:after {
+            background: #7b7b7b;
+        }.control-radio .control_indicator::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4.5rem;
+            height: 4.5rem;
+            margin-left: -1.3rem;
+            margin-top: -1.3rem;
+            background: #00ceff;
+            border-radius: 3rem;
+            opacity: 0.6;
+            z-index: 99999;
+            transform: scale(0);
+        }
+        @keyframes s-ripple {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            20% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0.01;
+                transform: scale(1);
+            }
+        }
+        @keyframes s-ripple-dup {
+            0% {
+                transform: scale(0);
+            }
+            30% {
+                transform: scale(1);
+            }
+            60% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1);
+            }
+        }
+        .control-radio input + .control_indicator::before {
+            animation: s-ripple 250ms ease-out;
+        }
+        .control-radio input:checked + .control_indicator::before {
+            animation-name: s-ripple-dup;
+        }
+
+        /* CHECKBOX STYLE */
+        .control {
+            font-family: inherit;
+            display: block;
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 5px;
+            padding-top: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+            .control input {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+            }
+        .control_indicator {
+            position: absolute;
+            top: 3px;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background: #ffffff;
+            border: 0px solid #000000;
+            border-radius: 0px;
+        }
+        .control:hover input ~ .control_indicator,
+        .control input:focus ~ .control_indicator {
+            background: #cccccc;
+        }
+
+        .control input:checked ~ .control_indicator {
+            background: #00ceff;
+        }
+        .control:hover input:not([disabled]):checked ~ .control_indicator,
+        .control input:checked:focus ~ .control_indicator {
+            background: #00ceff;
+        }
+        .control input:disabled ~ .control_indicator {
+            background: #ffffff;
+            opacity: 3;
+            pointer-events: none;
+        }
+        .control_indicator:after {
+            box-sizing: unset;
+            content: '';
+            position: absolute;
+            display: none;
+        }
+        .control input:checked ~ .control_indicator:after {
+            display: block;
+        }
+        .control-checkbox .control_indicator:after {
+            left: 8px;
+            top: 4px;
+            width: 3px;
+            height: 8px;
+            border: solid #ffffff;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        .control-checkbox input:disabled ~ .control_indicator:after {
+            border-color: #7b7b7b;
+        }
+        .control-checkbox .control_indicator::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4.5rem;
+            height: 4.5rem;
+            margin-left: -1.3rem;
+            margin-top: -1.3rem;
+            background: #00ceff;
+            border-radius: 3rem;
+            opacity: 0.6;
+            z-index: 99999;
+            transform: scale(0);
+        }
+        .control-checkbox input + .control_indicator::before {
+            animation: s-ripple 250ms ease-out;
+        }
+        .control-checkbox input:checked + .control_indicator::before {
+            animation-name: s-ripple-dup;
+        }
+
+        /* LINK STYLE */
+        .link {
+            color: #3629a2;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: inherit;
+            text-decoration: none;
+        }
+
+        /* TEXTBOX STYLE */
+        .css-input {
+            padding: 10px;
+            margin-top: 10px;
+            position: left;
+            display: block;
+            width: 25%;
+            font-size: 16px;
+            font-family: inherit;
+            border-width: 0px;
+            background-color: #FFFFFF;
+            color: #202020;
+            border-style: solid;
+            border-radius: 0px;
+            box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+        }
+        .css-input:focus {
+            outline:none;
+        }
          
+        /* DROP DOWN LIST STYLE */
+        .select {
+            position: relative;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 25%;
+        }
+        .select select {
+        font-family: inherit;
+        font-size: 16px;
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        padding: 10px 15px;
+        outline: 0;
+        border: 0px;
+        border-radius: 0px;
+        background: #ffffff;
+        color: #202020;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        }
+        .select select::-ms-expand {
+            display: none;
+        }
+        .select select:hover,
+        .select select:focus {
+            color: #777;
+            background: #ffffff;
+        }
+        .select select:disabled {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .select_arrow {
+            position: absolute;
+            top: 7px;
+            right: 15px;
+            width: 5px;
+            height: 5px;
+            border: solid #00ceff;
+            border-width: 0 4px 4px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+        .select select:hover ~ .select_arrow,
+        .select select:focus ~ .select_arrow {
+            border-color: #00ceff;
+        }
+        .select select:disabled ~ .select_arrow {
+            border-top-color: #ffffff;
+        }
+
+        /* COMMENT BOX STYLE */
+        .pb-cmnt-textarea {
+            resize: none;
+            font-family: inherit;
+            padding: 20px;
+            height: 75px;
+            margin-bottom: 50px;
+            width: 50%;
+            border: 0px;
+            border-radius: 3px;
+        }
+
+        /* FOOTER STYLES */
+        .footer {
+            position: relative;
+            float: left;
+            width: 50px;
+            font-size: x-large;
+            font-weight: bold;
+            background-color: white;
+            color: #202020;
+            font-family: inherit;
+            text-align: center;
+            margin-left: 10px;
+        }
+
+        .footer-alt {
+            position: relative;
+            float: left;
+            margin-left: 575px;
+            width: 200px;
+            white-space: nowrap;
+            font-size: x-large;
+            font-weight: lighter;
+            color: #202020;
+            font-family: inherit;
+            text-align: center;
+        }
+
+        /* IMAGE LINK STYLE */
+        .post-image {
+            margin: 20px auto;
+            display: inline;
+            max-width: 100%;
+            height: auto;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
 
 	</style>
 </head>
@@ -151,77 +499,159 @@
 <body>
     <h2 class="gradient-multiline"><span>SEG3125 Survey</span></h2>
 
+    <!-- LINK -->
+    <a class="link" href="http://gianlucacoletti.me/SEG3125/" title="Survey Link">Survey Link</a>
+
+    <!-- IMAGE LINK -->
+    <div>
+        <a href="http://gianlucacoletti.me/SEG3125/"><img class="post-image" src="images/image1.png" alt="Image Link" style="width: 530px ;height: 300px; display: block;"></a>
+    </div>
+
 	<!-- FORM INSTANTIATION -->
 	<form id="form">
 
-		
-        <!-- QUESTION 1 -->
-		<div class="form-control">
-			<label>
-				Question 1
+        <!-- TEXT INPUT QUESTION -->
+        <div class="control-group">
+            <label>
+				1. What is your name?
+			</label>
+            <input type="text" class="css-input" onkeypress="return event.keyCode!=13"/>
+        </div>
+
+        <!-- RADIO SELECT QUESTION -->
+        <div class="control-group">
+            <label>
+				2. This website has a user-friendly interface.
 			</label>
 
-			<!-- Input Type Radio Button -->
-			<label for="recommed-1">
-				<input type="radio"
-					id="recommed-1"
-					name="recommed">Yes</input>
-			</label>
-			<label for="recommed-2">
-				<input type="radio"
-					id="recommed-2"
-					name="recommed">No</input>
-			</label>
-			<label for="recommed-3">
-				<input type="radio"
-					id="recommed-3"
-					name="recommed">Maybe</input>
-			</label>
-		</div>
+            <label class="control control-radio">
+                Strongly Agree
+                    <input type="radio" name="radio0" />
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-radio">
+                Agree
+                    <input type="radio" name="radio0" />
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-radio">
+                Neutral
+                    <input type="radio" name="radio0" />
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-radio">
+                Disagree
+                    <input type="radio" name="radio0" />
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-radio">
+                Stongly Disagree
+                    <input type="radio" name="radio0" />
+                <div class="control_indicator"></div>
+            </label>
+        </div>
 
-        <!-- QUESTION 2 -->
-        <div class="form-control">
-			<label>
-				Question 2
-			</label>
-
-			<!-- Input Type Radio Button -->
-			<label for="recommed-1">
-				<input type="radio"
-					id="recommed-1"
-					name="recommed">Yes</input>
-			</label>
-			<label for="recommed-2">
-				<input type="radio"
-					id="recommed-2"
-					name="recommed">No</input>
-			</label>
-			<label for="recommed-3">
-				<input type="radio"
-					id="recommed-3"
-					name="recommed">Maybe</input>
-			</label>
-		</div>
-
-		<div class="form-control">
-			<label> Multi Select Question 
-				<small></small>
+        <!-- RADIO SELECT QUESTION -->
+        <div class="control-group">
+            <label>
+				3. This website has a pleasing colour scheme.
 			</label>
 
-			<!-- Input Type Checkbox -->
-			<label for="inp-1">
-				<input type="checkbox"
-					name="inp">C</input></label>
-			<label for="inp-2">
-				<input type="checkbox"
-					name="inp">C++</input></label>
-			<label for="inp-3">
-				<input type="checkbox"
-					name="inp">C#</input></label>
-		</div> 
+            <label class="control control-radio">
+                Strongly Agree
+                    <input type="radio" name="radio1" />
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-radio">
+                Agree
+                    <input type="radio" name="radio1" />
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-radio">
+                Neutral
+                    <input type="radio" name="radio1" />
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-radio">
+                Disagree
+                    <input type="radio" name="radio1" />
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-radio">
+                Stongly Disagree
+                    <input type="radio" name="radio1" />
+                <div class="control_indicator"></div>
+            </label>
+        </div>
 
-        <a href="#" class="btn-grad ">Submit</a>
+        <!-- SINGLE SELECTION QUESTION -->
+        <div class="control-group">
+            <label>
+				4. Which program are you in?
+			</label>
+
+            <div class="select">
+                <select>
+                    <option>Select Program</option>
+                    <option>CEG</option>
+                    <option>CSI</option>
+                    <option>ELG</option>
+                    <option>SEG</option>
+                    <option>Other</option>
+                </select>
+                <div class="select_arrow">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MULTIPLE SELECT QUESTION -->
+		<div class="control-group">
+            <label>
+				5. This website's UI attains these goals <small>(Check all that apply)</small>
+			</label>
+
+            <label class="control control-checkbox">
+                Proper Functionality
+                    <input type="checkbox" />
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+                Consistency
+                    <input type="checkbox" />
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+                Efficiency
+                    <input type="checkbox" />
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+                Usability
+                    <input type="checkbox"  />
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+                Reliability
+                    <input type="checkbox" />
+                <div class="control_indicator"></div>
+            </label>
+        </div>
+
+        <!-- COMMENT BOX -->
+        <textarea placeholder="Leave your comments here!" class="pb-cmnt-textarea"></textarea>
+
+        <!-- SUBMIT BUTTON -->
+        <a href="http://gianlucacoletti.me/SEG3125/" class="btn-grad ">Submit</a>
 	</form>
+
+    <!-- SIGNATURE -->
+    <div class="footer-alt">
+        <p>Website designed by </p>
+    </div><div class="footer">
+        <p>GCole</p>
+    </div>
+
 </body>
 
 </html>
