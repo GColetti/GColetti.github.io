@@ -447,24 +447,22 @@ appearance: none;
 
 /* FOOTER STYLES */
 .footer {
-    position: static;
-    float: left;
+    position: relative;
     width: 50px;
+    display: inline-block;
     font-size: x-large;
     font-weight: bold;
     background-color: white;
     color: #202020;
     font-family: inherit;
     text-align: center;
-    margin-left: 10px;
 }
 
+
 .footer-alt {
-    position: static;
-    float: left;
-    margin-left: 575px;
-    width: 200px;
-    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+    width: 215px;
     font-size: x-large;
     font-weight: lighter;
     color: #202020;
