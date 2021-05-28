@@ -40,6 +40,7 @@
 .footer {
   position: relative;
   width: 50px;
+  padding-left: 5px;
   display: inline-block;
   font-size: x-large;
   font-weight: bold;
@@ -53,10 +54,10 @@
 .footer-alt {
   position: relative;
   display: inline-block;
-  width: 215px;
+  width: 55%;
   font-size: x-large;
   font-weight: lighter;
   color: #202020;
-  font-family: inherit;
-  text-align: center;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+  text-align: right;
 }
