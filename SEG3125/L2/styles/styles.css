@@ -35,3 +35,28 @@
     border: 1px solid #ccc;
     border-top: none;
   }
+
+  /* FOOTER STYLES */
+.footer {
+  position: relative;
+  width: 50px;
+  display: inline-block;
+  font-size: x-large;
+  font-weight: bold;
+  background-color: white;
+  color: #202020;
+  font-family: inherit;
+  text-align: center;
+}
+
+
+.footer-alt {
+  position: relative;
+  display: inline-block;
+  width: 215px;
+  font-size: x-large;
+  font-weight: lighter;
+  color: #202020;
+  font-family: inherit;
+  text-align: center;
+}
