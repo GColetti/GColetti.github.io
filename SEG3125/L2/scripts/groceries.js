@@ -1,6 +1,6 @@
 	
 // Array of products, each product is an object with different fieldset
-// A set of ingredients should be added to products		 
+// A set of ingredients should be added to products
 
 var products = [
 	{
@@ -77,7 +77,6 @@ var products = [
 
 ];
 
-
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 function restrictListProducts(prods) {
@@ -105,14 +104,6 @@ function getTotalPrice(chosenProducts) {
 		}
 	}
 	return totalPrice.toFixed(2);
-}
-
-function getIndividualPrice(chosenProducts, ind){
-	for (let i=0; i<products.length; i+=1) {
-		if (products[i].name == ind){
-			return products[i].price;
-		}
-	}
 }
 
 // Check if none checkbox is checked (done to prevent selecting conflicting options)
