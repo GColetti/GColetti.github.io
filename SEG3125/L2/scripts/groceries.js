@@ -4,10 +4,30 @@
 
 var products = [
 	{
+		name: "Butter",
+		vegetarian: true,
+		glutenFree: true,
+		nutfree: true,
+		lactoseFree: false,
+		organic: false,
+		price: 0.99
+	},
+	{
 		name: "Broccoli",
 		vegetarian: true,
 		glutenFree: true,
 		nutfree: true,
+		lactoseFree: true,
+		organic: false,
+		price: 1.99
+	},
+	{
+		name: "Organic Apples",
+		vegetarian: true,
+		glutenFree: true,
+		nutfree: true,
+		lactoseFree: true,
+		organic: true,
 		price: 1.99
 	},
 	{
@@ -15,65 +35,73 @@ var products = [
 		vegetarian: true,
 		glutenFree: false,
 		nutfree: true,
+		lactoseFree: true,
+		organic: false,
+		price: 2.59
+	},
+	{
+		name: "Milk",
+		vegetarian: true,
+		glutenFree: true,
+		nutfree: true,
+		lactoseFree: false,
+		organic: false,
+		price: 2.59
+	},
+	{
+		name: "Almonds",
+		vegetarian: true,
+		glutenFree: true,
+		nutfree: false,
+		lactoseFree: true,
+		organic: false,
 		price: 2.99
+	},
+	{
+		name: "Cheese",
+		vegetarian: true,
+		glutenFree: true,
+		nutfree: true,
+		lactoseFree: false,
+		organic: false,
+		price: 2.99
+	},
+	{
+		name: "Organic Asparagus",
+		vegetarian: false,
+		glutenFree: true,
+		nutfree: true,
+		lactoseFree: true,
+		organic: true,
+		price: 2.99
+	},
+	{
+		name: "Pistachios",
+		vegetarian: true,
+		glutenFree: true,
+		nutfree: false,
+		lactoseFree: true,
+		organic: false,
+		price: 3.99
+	},
+	{
+		name: "Chicken Breast",
+		vegetarian: false,
+		glutenFree: true,
+		nutFree: true,
+		lactoseFree: true,
+		organic: false,
+		price: 5.99
 	},
 	{
 		name: "Salmon",
 		vegetarian: false,
 		glutenFree: true,
 		nutfree: true,
-		price: 10.59
+		lactoseFree: true,
+		organic: false,
+		price: 9.59
 	},
-	{
-		name: "Almonds",
-		vegetarian: false,
-		glutenFree: true,
-		nutfree: false,
-		price: 2.99
-	},
-	{
-		name: "Pistachios",
-		vegetarian: false,
-		glutenFree: true,
-		nutfree: false,
-		price: 3.99
-	},
-	{
-		name: "Steak",
-		vegetarian: false,
-		glutenFree: true,
-		nutfree: false,
-		price: 8.99
-	},
-	{
-		name: "Milk",
-		vegetarian: false,
-		glutenFree: true,
-		nutfree: false,
-		price: 2.59
-	},
-	{
-		name: "Cheese",
-		vegetarian: false,
-		glutenFree: true,
-		nutfree: false,
-		price: 2.99
-	},
-	{
-		name: "Butter",
-		vegetarian: false,
-		glutenFree: true,
-		nutfree: false,
-		lactoseFree: false,
-		price: 0.99
-	},
-	{
-		name: "Breadsticks",
-		vegetarian: false,
-		glutenFree: true,
-		nutfree: false,
-		price: 1.99
-	}
 
 ];
 
@@ -81,11 +109,29 @@ var products = [
 // prices should be included in this list, as well as a sort based on price
 function restrictListProducts(prods) {
 	let product_names = [];
+
+	//Check for all checked boxes
+	var veg = document.getElementById("Vegetarian").checked;
+	var glut = document.getElementById("GlutenFree").checked;
+	var nut = document.getElementById("Nut").checked;
+	var lac = document.getElementById("Lac").checked;
+	var org = document.getElementById("Organic").checked;
+
 	for (let i=0; i<prods.length; i+=1) {
-		if ((document.getElementById('Vegetarian').checked) && (prods[i].vegetarian == true)){
+		
+		if (veg && (prods[i].vegetarian === true)){
 			product_names.push(prods[i].name);
 		}
-		else if ((document.getElementById('GlutenFree').checked) && (prods[i].glutenFree == true)){
+		else if (glut && (prods[i].glutenFree === true)){
+			product_names.push(prods[i].name);
+		}
+		else if (nut && (prods[i].nutFree === true)){
+			product_names.push(prods[i].name);
+		}
+		else if (lac && (prods[i].lactoseFree === true)){
+			product_names.push(prods[i].name);
+		}
+		else if (org && (prods[i].organic === true)){
 			product_names.push(prods[i].name);
 		}
 		else if (document.getElementById('None').checked){
