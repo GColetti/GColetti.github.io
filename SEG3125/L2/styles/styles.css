@@ -55,6 +55,7 @@
 
 
 /* BUTTON STYLES */
+/* https://www.w3schools.com/howto/howto_css_animate_buttons.asp */
 .button-add {
   width: auto;
   padding: 5px;
@@ -153,6 +154,7 @@
 }
 
 /***** CHECKLIST STYLE *****/
+/* https://doodlenerd.com/html-control/css-checkbox-generator */
 .control-group{
   margin-top: 5px;
 }
@@ -271,6 +273,7 @@
 }
 
 /* TOAST STYLE */
+/* Retrived from: https://www.w3schools.com/howto/howto_js_snackbar.asp */
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {
   visibility: hidden; /* Hidden by default. Visible on click */

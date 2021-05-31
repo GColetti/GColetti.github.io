@@ -7,7 +7,7 @@ var products = [
 		name: "Butter",
 		vegetarian: true,
 		glutenFree: true,
-		nutfree: true,
+		nutFree: true,
 		lactoseFree: false,
 		organic: false,
 		price: 0.99
@@ -16,7 +16,7 @@ var products = [
 		name: "Broccoli",
 		vegetarian: true,
 		glutenFree: true,
-		nutfree: true,
+		nutFree: true,
 		lactoseFree: true,
 		organic: false,
 		price: 1.99
@@ -25,7 +25,7 @@ var products = [
 		name: "Organic Apples",
 		vegetarian: true,
 		glutenFree: true,
-		nutfree: true,
+		nutFree: true,
 		lactoseFree: true,
 		organic: true,
 		price: 1.99
@@ -34,7 +34,7 @@ var products = [
 		name: "Bread",
 		vegetarian: true,
 		glutenFree: false,
-		nutfree: true,
+		nutFree: true,
 		lactoseFree: true,
 		organic: false,
 		price: 2.59
@@ -43,7 +43,7 @@ var products = [
 		name: "Milk",
 		vegetarian: true,
 		glutenFree: true,
-		nutfree: true,
+		nutFree: true,
 		lactoseFree: false,
 		organic: false,
 		price: 2.59
@@ -52,7 +52,7 @@ var products = [
 		name: "Almonds",
 		vegetarian: true,
 		glutenFree: true,
-		nutfree: false,
+		nutFree: false,
 		lactoseFree: true,
 		organic: false,
 		price: 2.99
@@ -61,7 +61,7 @@ var products = [
 		name: "Cheese",
 		vegetarian: true,
 		glutenFree: true,
-		nutfree: true,
+		nutFree: true,
 		lactoseFree: false,
 		organic: false,
 		price: 2.99
@@ -70,7 +70,7 @@ var products = [
 		name: "Organic Asparagus",
 		vegetarian: false,
 		glutenFree: true,
-		nutfree: true,
+		nutFree: true,
 		lactoseFree: true,
 		organic: true,
 		price: 2.99
@@ -79,7 +79,7 @@ var products = [
 		name: "Pistachios",
 		vegetarian: true,
 		glutenFree: true,
-		nutfree: false,
+		nutFree: false,
 		lactoseFree: true,
 		organic: false,
 		price: 3.99
@@ -97,7 +97,7 @@ var products = [
 		name: "Salmon",
 		vegetarian: false,
 		glutenFree: true,
-		nutfree: true,
+		nutFree: true,
 		lactoseFree: true,
 		organic: false,
 		price: 9.59
@@ -153,6 +153,8 @@ function getTotalPrice(chosenProducts) {
 }
 
 // Check if none checkbox is checked (done to prevent selecting conflicting options)
+// Retrieved from: https://www.w3schools.com/howto/howto_js_display_checkbox_text.asp
+// https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/
 function isNoneChecked() {
 	// Get the checkbox
 	var checkBox = document.getElementById("None");
@@ -193,6 +195,7 @@ function areOthersChecked() {
 }
 
 // Toast notifcation code (from w3schools link)
+// https://www.w3schools.com/howto/howto_js_snackbar.asp
 function toastAlert() {
 	// Get the snackbar DIV
 	var x = document.getElementById("snackbar");
