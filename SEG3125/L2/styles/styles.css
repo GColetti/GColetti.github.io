@@ -48,6 +48,7 @@
   .tabcontent {
     display: none;
     padding: 6px 12px;
+    background-color: white;
     border: 1px solid #202020;
     border-top: none;
     border-radius: 3px;
