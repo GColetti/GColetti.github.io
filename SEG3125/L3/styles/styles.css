@@ -1,4 +1,4 @@
-/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+/* Parts of this style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
 
 /* Global font */
 *{
@@ -341,7 +341,6 @@
 
 .dropdown {
   position: relative;
-  display: inline-block;
 }
 
 .dropdown-content {
