@@ -13,6 +13,8 @@
 
 	<!-- This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp -->
 	<link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <!-- ICONS! -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="body">
@@ -22,11 +24,24 @@
     <h1 class="title-bar">Farmboy Grocery Site</h1>
 </div>
     
+
+
+<!-- Dropdown menu adapted from W3Schools-->
+<!-- Link: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_right-->
 <!-- Tab links, each one with an onclick event associated with it -->
+
+
 <div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+    <div class="dropdown" style="float:left;">
+        <button class="dropbtn"><i class="fa fa-bars"></i> Menu</button>
+        <div class="dropdown-content" style="left:0;">
+        <a href="http://gianlucacoletti.me/SEG3125/L3/" ><i class="fa fa-home" ></i> Home</a>
+        <a href="#" onclick="openInfo(event, 'Client')"><i class="fa fa-user"></i> Client</a>
+        <a href="#" onclick="openInfo(event, 'Products')"><i class="fa fa-cart-plus"></i> Products</a>
+        </div>
+      </div>
+  
+  <button class="tablinks" style="float:right; border-radius: 5px;" onclick="openInfo(event, 'Cart')"><i class="fa fa-shopping-cart"></i> Cart</button>
 </div>
 
 <!-- Tab content -->
