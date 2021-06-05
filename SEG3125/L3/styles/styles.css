@@ -104,7 +104,7 @@
 /* FOOTER STYLES */
 .footer {
   clear: both;
-  height: 75px;
+  height: 10%;
   position: absolute;
   width: 50px;
   left: 55%;
@@ -122,7 +122,7 @@
 
 .footer-alt {
   position: absolute;
-  height: 75px;
+  height: 10%;
   left: 0;
   bottom: 0;
   clear: both;
