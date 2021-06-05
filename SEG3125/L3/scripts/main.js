@@ -67,6 +67,7 @@ function populateListProductChoices(slct1, slct2) {
 // This function is called when the "Add selected items to cart" button in clicked
 // The purpose is to build the HTML to be displayed (a Paragraph) 
 // We build a paragraph to contain the list of selected items, and the total price
+var chosenProductsArr = [];
 
 function selectedItems(){
 	
@@ -86,6 +87,7 @@ function selectedItems(){
 			para.appendChild(document.createTextNode(ele[i].value));
 			para.appendChild(document.createElement("br"));
 			chosenProducts.push(ele[i].value);
+			chosenProductsArr.push(ele[i].value);
 		}
 	}
 		
