@@ -51,6 +51,7 @@
   /* Style the tab content */
   .tabcontent {
     display: none;
+    position: relative;
     padding: 6px 12px;
     background-color: white;
     border: 1px solid #202020;
@@ -109,9 +110,8 @@
   width: 50px;
   left: 55%;
   bottom: 0;
-  margin-top: -200px;
   padding-left: 5px;
-  display: inline-block;
+  display: block;
   font-size: x-large;
   font-weight: bold;
   color: #202020;
@@ -126,8 +126,7 @@
   left: 0;
   bottom: 0;
   clear: both;
-  margin-top: -200px;
-  display: inline-block;
+  display: block;
   width: 55%;
   font-size: x-large;
   font-weight: lighter;
@@ -414,3 +413,16 @@
 .dropdown-content a:hover { background-color: #E2E2E2; transform: translateY(0);}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #3C3C3C;}
+
+/* BANNER IMAGE STYLE */
+.banner-image{
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 100%;
+  margin: 5px;
+  margin-top: 25px;
+  border-radius: 5px;
+  filter: drop-shadow(2px 2px 1px #202020);
+    -webkit-filter: drop-shadow(2px 2px 1px #202020);
+}
