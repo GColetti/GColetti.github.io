@@ -3,10 +3,10 @@
 // A set of ingredients should be added to products
 var products = [
 	{
-		name: "Butter",
+		name: "Almond Butter",
 		vegetarian: true,
 		glutenFree: true,
-		nutFree: true,
+		nutFree: false,
 		lactoseFree: false,
 		organic: false,
 		price: 0.99
@@ -21,7 +21,7 @@ var products = [
 		price: 1.99
 	},
 	{
-		name: "Organic Apples",
+		name: "Organic Apple Slices",
 		vegetarian: true,
 		glutenFree: true,
 		nutFree: true,
@@ -30,7 +30,7 @@ var products = [
 		price: 1.99
 	},
 	{
-		name: "Bread",
+		name: "Multigrain Bread",
 		vegetarian: true,
 		glutenFree: false,
 		nutFree: true,
@@ -39,12 +39,12 @@ var products = [
 		price: 2.59
 	},
 	{
-		name: "Milk",
+		name: "Organic Milk",
 		vegetarian: true,
 		glutenFree: true,
 		nutFree: true,
 		lactoseFree: false,
-		organic: false,
+		organic: true,
 		price: 2.59
 	},
 	{
@@ -57,12 +57,12 @@ var products = [
 		price: 2.99
 	},
 	{
-		name: "Cheese",
+		name: "Organic Cheeses",
 		vegetarian: true,
 		glutenFree: true,
 		nutFree: true,
 		lactoseFree: false,
-		organic: false,
+		organic: true,
 		price: 2.99
 	},
 	{
