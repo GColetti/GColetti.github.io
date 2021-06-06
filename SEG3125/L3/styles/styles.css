@@ -105,13 +105,15 @@
 /* FOOTER STYLES */
 .footer {
   clear: both;
-  height: 10%;
-  position: absolute;
-  width: 50px;
-  left: 55%;
+  height: 75px;
+  position: fixed;
+  width: 100%;
+  left: 0;
   bottom: 0;
   padding-left: 5px;
   display: block;
+  margin-top: -10px;
+  margin-left: 65px;
   font-size: x-large;
   font-weight: bold;
   color: #202020;
@@ -119,20 +121,25 @@
   text-align: center;
 }
 
-
 .footer-alt {
-  position: absolute;
-  height: 10%;
+  position: fixed;
   left: 0;
   bottom: 0;
   clear: both;
   display: block;
-  width: 55%;
+  width: 90%;
+  height: 75px;
+  padding-top: 10px;
   font-size: x-large;
   font-weight: lighter;
   color: #202020;
   font-family: inherit;
-  text-align: right;
+  text-align: center;
+}
+
+.footer-con {
+  min-height: 100%;
+  margin-bottom: -50px;
 }
 
 .row {
@@ -425,4 +432,15 @@
   border-radius: 5px;
   filter: drop-shadow(2px 2px 1px #202020);
     -webkit-filter: drop-shadow(2px 2px 1px #202020);
+}
+
+
+/* CHECKLIST IMAGE STYLE */
+#cl-image {
+  margin: 5 auto;
+  padding: 10px;
+  height: 75px;
+  display: inline-block;
+  width: 125px;
+  
 }

@@ -53,6 +53,12 @@ function populateListProductChoices(slct1, slct2) {
 		var label = document.createElement('label');
 		label.htmlFor = productName;
 
+		// Create image for checklist
+		var img = new Image();
+		img.src = "images/FB-milk.png";
+		img.id = "cl-image"
+		label.appendChild(img);
+
 		// Find price associated with item being added
 		var itemPrice = products.find(itemPrice => itemPrice.name === productName).price;
 		
@@ -96,3 +102,12 @@ function selectedItems(){
 	c.appendChild(document.createTextNode("Cart Total is $" + getTotalPrice(chosenProducts)));
 		
 }
+
+// From: https://www.w3schools.com/jsref/dom_obj_image.asp
+function changeit(option) {
+
+	console.log(option);
+	if (option === "salade")
+	  document.getElementById("imgselect").setAttribute("src", "https://druxys.com/wp-content/uploads/2016/11/SaladThumb-GardenSalad.png");
+  
+  }
