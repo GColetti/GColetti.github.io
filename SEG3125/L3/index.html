@@ -19,139 +19,139 @@
 
 <body class="body">
 
-<div class="row">  
-    <img class="logo" src="images/logo.png" alt="logo">
-    <h1 style = "font-family: Georgia, 'Times New Roman', Times, serif; color: white; text-shadow: 2px 2px 6px #202020;" class ="title-bar">FARM BOY Online Groceries</h1>
+    <div class="row">  
+        <img class="logo" src="images/logo.png" alt="logo">
+        <h1 style = "font-family: Georgia, 'Times New Roman', Times, serif; color: white; text-shadow: 2px 2px 6px #202020;" class ="title-bar">FARM BOY Online Groceries</h1>
 
-    <!-- Banner Image -->
-    <img class="banner-image" src="images/FB-banner.png" alt="banner">  
-</div>
+        <!-- Banner Image -->
+        <img class="banner-image" src="images/FB-banner.png" alt="banner">  
+    </div>
 
-<!-- Dropdown menu adapted from W3Schools-->
-<!-- Link: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_right-->
-<!-- Tab links, each one with an onclick event associated with it -->
-<div class="tab">
-    <div class="dropdown" style="float:left;">
-        <button class="dropbtn"><i class="fa fa-bars"></i> Menu</button>
-        <div class="dropdown-content" style="left:0;">
-        <a href="http://gianlucacoletti.me/SEG3125/L3/" ><i class="fa fa-home" ></i> Home</a>
-        <a href="#" onclick="openInfo(event, 'Client')"><i class="fa fa-user"></i> Client</a>
-        <a href="#" onclick="openInfo(event, 'Products')"><i class="fa fa-cart-plus"></i> Products</a>
+    <!-- Dropdown menu adapted from W3Schools-->
+    <!-- Link: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_right-->
+    <!-- Tab links, each one with an onclick event associated with it -->
+    <div class="tab">
+        <div class="dropdown" style="float:left;">
+            <button class="dropbtn"><i class="fa fa-bars"></i> Menu</button>
+            <div class="dropdown-content" style="left:0;">
+            <a href="http://gianlucacoletti.me/SEG3125/L3/" ><i class="fa fa-home" ></i> Home</a>
+            <a href="#" onclick="openInfo(event, 'Client')"><i class="fa fa-user"></i> Client</a>
+            <a href="#" onclick="openInfo(event, 'Products')"><i class="fa fa-cart-plus"></i> Products</a>
+            </div>
         </div>
-      </div>
-  
-    <button class="tablinks" style="float:right; border-radius: 5px;" onclick="openInfo(event, 'Cart')"><i class="fa fa-shopping-cart"></i> Cart</button>
-</div>
-
-<!-- Welcome message -->
-<h3 class= "welcome-msg" style= "position: absolute; z-index: -1;"><i class="fa fa-arrow-up" ></i> Welcome to FARM BOY Groceries! Please browse the Menu to get started. </h3>
-
-<!-- Tab content -->
-<div id="Client" class="tabcontent" style= "position: absolute; z-index: -1;">
     
-  <h3>Client Information</h3>
-  <p>Tell us a bit about your dietary restrictions.<small> (If no restrictions apply, please choose "None")</small></p>
-	Choose your restrictions:
-    <div class="control-group" id="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-        <label class="control control-checkbox">
-            None
-            <input name="dietSelect" type="checkbox" id="None" value= "None"  onclick="isNoneChecked()" />
-            <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-            Vegetarian
-            <input name="dietSelect" type="checkbox" id="Vegetarian" value= "Vegetarian" onclick="areOthersChecked()"/>
-            <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-            Gluten-Free
-            <input name="dietSelect" type="checkbox" id="GlutenFree" value= "GlutenFree" onclick="areOthersChecked()"/>
-            <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-            Nut Allergy
-            <input name="dietSelect" type="checkbox" id="Nut" value= "Nut" onclick="areOthersChecked()"/>
-            <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-            Lactose-Intolerant
-            <input name="dietSelect" type="checkbox" id="Lac" value= "Lac" onclick="areOthersChecked()"/>
-            <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-            Organic
-            <input name="dietSelect" type="checkbox" id="Organic" value= "Organic" onclick="areOthersChecked()"/>
-            <div class="control_indicator"></div>
-        </label>
+        <button class="tablinks" style="float:right; border-radius: 5px;" onclick="openInfo(event, 'Cart')"><i class="fa fa-shopping-cart"></i> Cart</button>
+    </div>
 
-        <button class="button-shop" onclick="openInfo(event, 'Products')" type="button">
-            <span>Proceed to Shop</span> 
+    <!-- Welcome message -->
+    <h3 class= "welcome-msg" style= "position: absolute; z-index: -1;"><i class="fa fa-arrow-up" ></i> Welcome to FARM BOY Groceries! Please browse the Menu to get started. </h3>
+
+    <!-- Tab content -->
+    <div id="Client" class="tabcontent" style= "position: absolute; z-index: -1;">
+        
+    <h3>Client Information</h3>
+    <p>Tell us a bit about your dietary restrictions.<small> (If no restrictions apply, please choose "None")</small></p>
+        Choose your restrictions:
+        <div class="control-group" id="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+            <label class="control control-checkbox">
+                None
+                <input name="dietSelect" type="checkbox" id="None" value= "None"  onclick="isNoneChecked()" />
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+                Vegetarian
+                <input name="dietSelect" type="checkbox" id="Vegetarian" value= "Vegetarian" onclick="areOthersChecked()"/>
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+                Gluten-Free
+                <input name="dietSelect" type="checkbox" id="GlutenFree" value= "GlutenFree" onclick="areOthersChecked()"/>
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+                Nut Allergy
+                <input name="dietSelect" type="checkbox" id="Nut" value= "Nut" onclick="areOthersChecked()"/>
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+                Lactose-Intolerant
+                <input name="dietSelect" type="checkbox" id="Lac" value= "Lac" onclick="areOthersChecked()"/>
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+                Organic
+                <input name="dietSelect" type="checkbox" id="Organic" value= "Organic" onclick="areOthersChecked()"/>
+                <div class="control_indicator"></div>
+            </label>
+
+            <button class="button-shop" onclick="openInfo(event, 'Products')" type="button">
+                <span>Proceed to Shop</span> 
+            </button>
+
+        </div>
+    </div>
+
+    <div id="Products" class="tabcontent" style= "position: absolute; z-index: -1;">
+    <h3>Your Targeted Products</h3>
+    <p>We preselected products based on your restrictions.</p>
+        Choose items to buy:
+        <div id="displayProduct"></div>
+        <button class="button-add" id="addCart" type="button" class="block" onclick="selectedItems(); toastAlert()">
+            <span>Add Selected Items to Cart</span> 
+        </button>
+    </div>
+
+    <div id="Cart" class="tabcontent" style= "position: absolute; z-index: -1;">
+    <h3>Cart</h3>
+    <p>Here is your cart.</p>
+    <div id="displayCart"></div>
+    
+    <div class="control2-group">
+        <p style = "font-weight: bold;">Choose your grocery delivery preference: </p>
+        <label class="control2 control2-radio">
+            In-Store Pickup
+                <input type="radio" name="radio" />
+            <div class="control2_indicator"></div>
+        </label>
+        <label class="control2 control2-radio">
+            Curbside Pickup
+                <input type="radio" name="radio" />
+            <div class="control2_indicator"></div>
+        </label>
+        <label class="control2 control2-radio">
+            Home Delivery (1-Hour Service)
+                <input type="radio" name="radio" />
+            <div class="control2_indicator"></div>
+        </label>
+    
+        </div>
+
+        <button class="button-rtn" onclick="openInfo(event, 'Products')" type="button">
+            <span>Back to Shop</span> 
         </button>
 
+        <button class="button-chk"  id = "chkout" onclick="toastAlert2();" type="button">
+            <span>Checkout</span> 
+        </button>
     </div>
-</div>
-
-<div id="Products" class="tabcontent" style= "position: absolute; z-index: -1;">
-  <h3>Your Targeted Products</h3>
-  <p>We preselected products based on your restrictions.</p>
-	 Choose items to buy:
-	 <div id="displayProduct"></div>
-	 <button class="button-add" id="addCart" type="button" class="block" onclick="selectedItems(); toastAlert()">
-		<span>Add Selected Items to Cart</span> 
-	</button>
-</div>
-
-<div id="Cart" class="tabcontent" style= "position: absolute; z-index: -1;">
-  <h3>Cart</h3>
-  <p>Here is your cart.</p>
-  <div id="displayCart"></div>
-  
-  <div class="control2-group">
-    <p style = "font-weight: bold;">Choose your grocery delivery preference: </p>
-    <label class="control2 control2-radio">
-        In-Store Pickup
-            <input type="radio" name="radio" checked="checked" />
-        <div class="control2_indicator"></div>
-    </label>
-    <label class="control2 control2-radio">
-        Curbside Pickup
-            <input type="radio" name="radio" />
-        <div class="control2_indicator"></div>
-    </label>
-    <label class="control2 control2-radio">
-        Home Delivery (1-Hour Service)
-            <input type="radio" name="radio" />
-        <div class="control2_indicator"></div>
-    </label>
-   
     </div>
 
-    <button class="button-rtn" onclick="openInfo(event, 'Products')" type="button">
-        <span>Back to Shop</span> 
-    </button>
+    <!-- The actual snackbars -->
+    <div id="snackbar-succ">Successfully added items to cart!</div>
+    <div id="snackbar-fail">Please select an item!</div>
+    <div id="snackbar-chk">Order Successful! Please pay on pickup.</div>
 
-    <button class="button-chk"  id = "chkout" onclick="toastAlert2();" type="button">
-        <span>Checkout</span> 
-    </button>
-</div>
-</div>
-
-<!-- The actual snackbars -->
-<div id="snackbar-succ">Successfully added items to cart!</div>
-<div id="snackbar-fail">Please select an item!</div>
-<div id="snackbar-chk">Order Successful! Please pay on pickup.</div>
-
-<script src="scripts/groceries.js"></script>
-<script src="scripts/main.js"></script>
+    <script src="scripts/groceries.js"></script>
+    <script src="scripts/main.js"></script>
 
 
-<!-- SIGNATURE -->
-<div class= "footer-alt" style = "z-index: -2;">
-    <p>Website designed by</p>
-</div>
-<div class="footer" style = "z-index: -2;"> 
-    <p>GCole</p>
-</div>
+    <!-- SIGNATURE -->
+    <div class= "footer-alt" style = "z-index: -2;">
+        <p>Website designed by</p>
+    </div>
+    <div class="footer" style = "z-index: -2;"> 
+        <p>GCole</p>
+    </div>
 
 </body>
 </html>
