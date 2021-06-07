@@ -239,19 +239,12 @@
   right: 0;
 }
 
-
-
-
 /* FOOTER STYLES */
-.footer-con {
-  margin: 0 auto;
-}
 
 .footer {
-  clear: both;
-  height: 55px;
+  height: auto;
   position: relative;
-  margin-top: 450px;
+  top: 450px;
   width: 50px;
   padding-left: 5px;
   display: inline-block;
@@ -266,11 +259,8 @@
 
 .footer-alt {
   position: relative;
-  height: 55px;
-  clear: both;
-  bottom: 0;
-  margin-bottom: 10px;
-  margin-top: 450px;
+  height: auto;
+  top: 450px;
   display: inline-block;
   width: 50%;
   font-size: x-large;
