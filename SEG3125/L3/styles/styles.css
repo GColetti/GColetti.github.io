@@ -583,7 +583,7 @@
 
 }
 
-.dropdown-content a:hover { background-color: #E2E2E2; transform: translateY(0);}
+.dropdown-content a:hover { background-color: #3C3C3C; transform: translateY(0);}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #3C3C3C;}
 
