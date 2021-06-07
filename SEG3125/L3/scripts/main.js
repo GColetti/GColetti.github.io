@@ -128,7 +128,7 @@ function getPic(prod) {
 	else if (prod == "Almonds"){
 		img = "images/FB-almonds.png";
 	}
-	else if (prod == "Organic Cheeses"){
+	else if (prod == "Organic Cheese"){
 		img = "images/FB-cheese.jpg";
 	}
 	else if (prod == "Organic Asparagus"){

@@ -57,7 +57,7 @@ var products = [
 		price: 2.99
 	},
 	{
-		name: "Organic Cheeses",
+		name: "Organic Cheese",
 		vegetarian: true,
 		glutenFree: true,
 		nutFree: true,

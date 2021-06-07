@@ -36,15 +36,15 @@
             <div class="dropdown-content" style="left:0;">
             <a href="http://gianlucacoletti.me/SEG3125/L3/" ><i class="fa fa-home" ></i> Home</a>
             <a href="#" onclick="openInfo(event, 'Client')"><i class="fa fa-user"></i> Client</a>
-            <a href="#" onclick="openInfo(event, 'Products')"><i class="fa fa-cart-plus"></i> Products</a>
+            <a href="#" onclick="openInfo(event, 'Products')"><i class="fa fa-shopping-cart"></i> Products</a>
             </div>
         </div>
     
-        <button class="tablinks" style="float:right; border-radius: 5px;" onclick="openInfo(event, 'Cart')"><i class="fa fa-shopping-cart"></i> Cart</button>
+        <button class="tablinks" style="float:right; border-radius: 5px;" onclick="openInfo(event, 'Cart')"><i class="fa fa-shopping-basket"></i> Cart</button>
     </div>
 
     <!-- Welcome message -->
-    <h3 class= "welcome-msg" style= "position: absolute; z-index: -1;"><i class="fa fa-arrow-up" ></i> Welcome to FARM BOY Groceries! Please browse the Menu to get started. </h3>
+    <h3 class= "welcome-msg" style= "position: absolute; z-index: -1;"><i class="fa fa-arrow-up fa-xs" ></i> Welcome to FARM BOY Groceries! Please browse the Menu to get started. </h3>
 
     <!-- Tab content -->
     <div id="Client" class="tabcontent" style= "position: absolute; z-index: -1;">
@@ -107,7 +107,7 @@
     <div id="displayCart"></div>
     
     <div class="control2-group">
-        <p style = "font-weight: bold;">Choose your grocery delivery preference: </p>
+        <p style = "font-weight: bold;"><i class="fa fa-truck fa-flip-horizontal" ></i> Choose your grocery delivery preference: </p>
         <label class="control2 control2-radio">
             In-Store Pickup
                 <input type="radio" name="radio" checked = "checked"/>
