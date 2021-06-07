@@ -52,16 +52,17 @@ function populateListProductChoices(slct1, slct2) {
 		var label = document.createElement('label');
 		label.htmlFor = productName;
 
-		// Create image for checklist
-		var img = new Image();
-		img.src = getPic(productName);
-		img.id = "cl-image"
-		label.appendChild(img);
-
 		// Find price associated with item being added
 		var itemPrice = products.find(itemPrice => itemPrice.name === productName).price;
 		
 		label.appendChild(document.createTextNode(" " + productName + " ($" + itemPrice + "/item)"));
+		
+		// Create image for checklist
+		var img = new Image();
+		img.src = getPic(productName);
+		img.id = "cl-image"
+		label.appendChild(document.createElement("br"));    
+		label.appendChild(img);
 		s2.appendChild(label);
 		
 		// create a breakline node and add in HTML DOM
@@ -73,6 +74,7 @@ function populateListProductChoices(slct1, slct2) {
 // The purpose is to build the HTML to be displayed (a Paragraph) 
 // We build a paragraph to contain the list of selected items, and the total price
 var chosenProductsArr = [];
+var cartReady = false;
 
 function selectedItems(){
 	
@@ -99,6 +101,8 @@ function selectedItems(){
 	// Add paragraph and total price
 	c.appendChild(para);
 	c.appendChild(document.createTextNode("Cart Total is $" + getTotalPrice(chosenProducts)));
+	// Notify that items are in cart (ready for checkout)
+	cartReady = true;
 		
 }
 

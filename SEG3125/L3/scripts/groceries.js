@@ -196,8 +196,6 @@ function areOthersChecked() {
 // Toast notifcation code (from w3schools link) and adapted for website
 // https://www.w3schools.com/howto/howto_js_snackbar.asp
 function toastAlert() {
-	
-
 	if (chosenProductsArr.length < 1){
 		// Get the snackbar DIV
 		var x = document.getElementById("snackbar-fail");
@@ -221,12 +219,23 @@ function toastAlert() {
 }
 
 function toastAlert2() {
-	// Get the snackbar DIV
-	var x = document.getElementById("snackbar-chk");
+	if (cartReady){
+		// Get the snackbar DIV
+		var x = document.getElementById("snackbar-chk");
 
-	// Add the "show" class to DIV
-	x.className = "show";
+		// Add the "show" class to DIV
+		x.className = "show";
 
-	// After 3 seconds, remove the show class from DIV
-	setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+		// After 3 seconds, remove the show class from DIV
+		setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+	} else {
+		// Get the snackbar DIV
+		var x = document.getElementById("snackbar-chk-fail");
+
+		// Add the "show" class to DIV
+		x.className = "show";
+
+		// After 3 seconds, remove the show class from DIV
+		setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+	}
 }
