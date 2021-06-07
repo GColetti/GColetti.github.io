@@ -9,7 +9,7 @@ var products = [
 		nutFree: false,
 		lactoseFree: false,
 		organic: false,
-		price: 0.99
+		price: 1.99
 	},
 	{
 		name: "Broccoli",
@@ -84,7 +84,7 @@ var products = [
 		price: 3.99
 	},
 	{
-		name: "Chicken Breast",
+		name: "Chicken",
 		vegetarian: false,
 		glutenFree: true,
 		nutFree: true,
@@ -196,6 +196,8 @@ function areOthersChecked() {
 // Toast notifcation code (from w3schools link) and adapted for website
 // https://www.w3schools.com/howto/howto_js_snackbar.asp
 function toastAlert() {
+	
+
 	if (chosenProductsArr.length < 1){
 		// Get the snackbar DIV
 		var x = document.getElementById("snackbar-fail");
@@ -205,7 +207,7 @@ function toastAlert() {
 
 		// After 3 seconds, remove the show class from DIV
 		setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-	} else{
+	} else {
 		// Get the snackbar DIV
 		var x = document.getElementById("snackbar-succ");
 
@@ -216,4 +218,15 @@ function toastAlert() {
 		setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 	}
 	
+}
+
+function toastAlert2() {
+	// Get the snackbar DIV
+	var x = document.getElementById("snackbar-chk");
+
+	// Add the "show" class to DIV
+	x.className = "show";
+
+	// After 3 seconds, remove the show class from DIV
+	setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }

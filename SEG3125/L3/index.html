@@ -21,7 +21,8 @@
 
 <div class="row">  
     <img class="logo" src="images/logo.png" alt="logo">
-    <h1 class="title-bar">Farmboy Grocery Site</h1>
+    <h1 style = "font-family: Georgia, 'Times New Roman', Times, serif; color: white; font-weight: 100;" class ="title-bar">FARM BOY Online Groceries</h1>
+
     <!-- Banner Image -->
     <img class="banner-image" src="images/FB-banner.png" alt="banner">  
 </div>
@@ -43,7 +44,6 @@
 </div>
 
 <!-- Tab content -->
-
 <div id="Client" class="tabcontent" style= "position: absolute; z-index: -1;">
     
   <h3>Client Information</h3>
@@ -80,6 +80,11 @@
             <input name="dietSelect" type="checkbox" id="Organic" value= "Organic" onclick="areOthersChecked()"/>
             <div class="control_indicator"></div>
         </label>
+
+        <button class="button-shop" onclick="openInfo(event, 'Products')" type="button">
+            <span>Proceed to Shop</span> 
+        </button>
+
     </div>
 </div>
 
@@ -97,27 +102,53 @@
   <h3>Cart</h3>
   <p>Here is your cart.</p>
   <div id="displayCart"></div>
+  
+  <div class="control2-group">
+    <p style = "font-weight: bold;">Choose your grocery delivery preference: </p>
+    <label class="control2 control2-radio">
+        In-Store Pickup
+            <input type="radio" name="radio" checked="checked" />
+        <div class="control2_indicator"></div>
+    </label>
+    <label class="control2 control2-radio">
+        Curbside Pickup
+            <input type="radio" name="radio" />
+        <div class="control2_indicator"></div>
+    </label>
+    <label class="control2 control2-radio">
+        Home Delivery (1-Hour Service)
+            <input type="radio" name="radio" />
+        <div class="control2_indicator"></div>
+    </label>
+   
+    </div>
+
+    <button class="button-rtn" onclick="openInfo(event, 'Products')" type="button">
+        <span>Back to Shop</span> 
+    </button>
+
+    <button class="button-chk"  id = "chkout" onclick="toastAlert2();" type="button">
+        <span>Checkout</span> 
+    </button>
+</div>
 </div>
 
 <!-- The actual snackbars -->
 <div id="snackbar-succ">Successfully added items to cart!</div>
 <div id="snackbar-fail">Please add an item to your cart!</div>
-
+<div id="snackbar-chk">Order Successful! Please pay on pickup.</div>
 
 <script src="scripts/groceries.js"></script>
 <script src="scripts/main.js"></script>
 
 
 <!-- SIGNATURE -->
-<div class= "footer-con" >
-    <div class= "footer-alt">
-        <p>Website designed by </p>
-    </div>
-    <div class="footer">
-        <p>GCole</p>
-    </div>
+<div class= "footer-alt" style = "z-index: -2;">
+    <p>Website designed by </p>
 </div>
-
+<div class="footer" style = "z-index: -2;"> 
+    <p>GCole</p>
+</div>
 
 </body>
 </html>

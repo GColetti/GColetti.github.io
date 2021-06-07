@@ -55,14 +55,14 @@ function populateListProductChoices(slct1, slct2) {
 
 		// Create image for checklist
 		var img = new Image();
-		img.src = "images/FB-milk.png";
+		img.src = getPic(productName);
 		img.id = "cl-image"
 		label.appendChild(img);
 
 		// Find price associated with item being added
 		var itemPrice = products.find(itemPrice => itemPrice.name === productName).price;
 		
-		label.appendChild(document.createTextNode(productName + " ($" + itemPrice + "/item)"));
+		label.appendChild(document.createTextNode(" " + productName + " ($" + itemPrice + "/item)"));
 		s2.appendChild(label);
 		
 		// create a breakline node and add in HTML DOM
@@ -110,4 +110,46 @@ function changeit(option) {
 	if (option === "salade")
 	  document.getElementById("imgselect").setAttribute("src", "https://druxys.com/wp-content/uploads/2016/11/SaladThumb-GardenSalad.png");
   
-  }
+}
+
+//Helper function to pick correct image for checklist 
+function getPic(prod) {
+	var img;
+
+	if (prod == "Almond Butter"){
+		img = "images/FB-butter.png";
+	}
+	else if (prod == "Broccoli"){
+		img = "images/FB-broccoli.png";
+	}
+	else if (prod == "Organic Apple Slices"){
+		img = "images/FB-apple-slices.jpg";
+	}
+	else if (prod == "Multigrain Bread"){
+		img = "images/FB-bread.png";
+	}
+	else if (prod == "Organic Milk"){
+		img = "images/FB-milk.png";
+	}
+	else if (prod == "Almonds"){
+		img = "images/FB-almonds.png";
+	}
+	else if (prod == "Organic Cheeses"){
+		img = "images/FB-cheese.jpg";
+	}
+	else if (prod == "Organic Asparagus"){
+		img = "images/FB-asparagus.png";
+	}
+	else if (prod == "Pistachios"){
+		img = "images/FB-pis.jpg";
+	}
+	else if (prod == "Chicken"){
+		img= "images/FB-chicken.png";
+	}
+	else if (prod == "Salmon"){
+		img = "images/FB-salmon.png";
+	}
+
+	return img;
+
+}

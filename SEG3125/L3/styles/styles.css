@@ -7,7 +7,7 @@
 
 /* BODY STYLE */
 .body{
-  background-color: #E2E2E2;
+  background-color: #3C3C3C;
 }
 
 /* Style the tab */
@@ -51,12 +51,11 @@
   /* Style the tab content */
   .tabcontent {
     display: none;
-    position: relative;
-    padding: 6px 12px;
-    background-color: white;
+    padding: 10px 10px 10px 10px;
+    background-color: #E3E3E3;
     border: 1px solid #202020;
     border-top: none;
-    width: 98%;
+    width: 97%;
     border-radius: 3px;
   }
 
@@ -65,8 +64,8 @@
 /* https://www.w3schools.com/howto/howto_css_animate_buttons.asp */
 .button-add {
   width: auto;
-  padding: 5px;
-  margin-top: 10px;
+  padding: 10px;
+  margin-top: 25px;
   margin-bottom: 10px;
   background-color: #202020;
   border: 1px solid #E6D2A1;
@@ -77,6 +76,7 @@
   -webkit-filter: drop-shadow(2px 2px 1px #202020);
 
 }
+
 .button-add span {
   cursor: pointer;
   display: inline;
@@ -102,6 +102,135 @@
   right: 0;
 }
 
+/* SHOP BUTTON */
+.button-shop {
+  width: auto;
+  margin-left: 10px;
+  padding: 5px;
+  margin-top: 10px;
+  height: 35px;
+  margin-bottom: 10px;
+  background-color: #202020;
+  border: 1px solid #E6D2A1;
+  color: white;
+  transition: all 0.5s;
+  border-radius: 3px;
+  filter: drop-shadow(2px 2px 1px #202020);
+  -webkit-filter: drop-shadow(2px 2px 1px #202020);
+
+}
+
+.button-shop  span {
+  cursor: pointer;
+  display: inline;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-shop  span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-shop:hover span {
+  padding-right: 25px;
+}
+
+.button-shop:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* RETURN SHOP BUTTON */
+.button-rtn {
+  width: auto;
+  margin-left: 10px;
+  padding: 5px;
+  margin-top: 10px;
+  height: 35px;
+  margin-bottom: 10px;
+  background-color: #202020;
+  border: 1px solid #E6D2A1;
+  color: white;
+  transition: all 0.5s;
+  border-radius: 3px;
+  filter: drop-shadow(2px 2px 1px #202020);
+  -webkit-filter: drop-shadow(2px 2px 1px #202020);
+
+}
+
+.button-rtn  span {
+  cursor: pointer;
+  display: inline;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-rtn  span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-rtn:hover span {
+  padding-right: 25px;
+}
+
+.button-rtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* RETURN SHOP BUTTON */
+.button-chk {
+  width: auto;
+  margin-left: 10px;
+  padding: 5px;
+  margin-top: 10px;
+  height: 35px;
+  margin-bottom: 10px;
+  background-color: #202020;
+  border: 1px solid #E6D2A1;
+  color: white;
+  transition: all 0.5s;
+  border-radius: 3px;
+  filter: drop-shadow(2px 2px 1px #202020);
+  -webkit-filter: drop-shadow(2px 2px 1px #202020);
+
+}
+
+.button-chk  span {
+  cursor: pointer;
+  display: inline;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-chk  span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-chk:hover span {
+  padding-right: 25px;
+}
+
+.button-chk:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 /* FOOTER STYLES */
 .footer {
   clear: both;
@@ -116,7 +245,7 @@
   margin-left: 65px;
   font-size: x-large;
   font-weight: bold;
-  color: #202020;
+  color: white;
   font-family: inherit;
   text-align: center;
 }
@@ -132,14 +261,9 @@
   padding-top: 10px;
   font-size: x-large;
   font-weight: lighter;
-  color: #202020;
+  color: white;
   font-family: inherit;
   text-align: center;
-}
-
-.footer-con {
-  min-height: 100%;
-  margin-bottom: -50px;
 }
 
 .row {
@@ -158,10 +282,8 @@
 
 /* TITLE BAR STYLE */
 .title-bar {
-  font-family: inherit;
   width: 75%;
   font-size: 50px;
-  text-transform: capitalize;
   font-weight: 100;
   color: black;  
   padding-top: 25px;
@@ -321,6 +443,21 @@
   bottom: 30px; /* 30px from the bottom */
 }
 
+#snackbar-chk {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #97D701;
+  color: white; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 5px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
 #snackbar-succ.show {
   visibility: visible; /* Show the snackbar */
@@ -352,6 +489,35 @@
 }
 
 #snackbar-fail.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: .5;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: .5;}
+  to {bottom: 0; opacity: 0;}
+}
+
+#snackbar-chk.show {
   visibility: visible; /* Show the snackbar */
   /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
   However, delay the fade out process for 2.5 seconds */
@@ -428,7 +594,7 @@
   width: 50%;
   height: 100%;
   margin: 5px;
-  margin-top: 25px;
+  margin-top: 20px;
   border-radius: 5px;
   filter: drop-shadow(2px 2px 1px #202020);
     -webkit-filter: drop-shadow(2px 2px 1px #202020);
@@ -438,9 +604,138 @@
 /* CHECKLIST IMAGE STYLE */
 #cl-image {
   margin: 5 auto;
-  padding: 10px;
-  height: 75px;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  background-color: #202020;
+  border: 1px solid #E6D2A1;
+  height: auto;
   display: inline-block;
   width: 125px;
+  filter: drop-shadow(2px 2px 1px #202020);
+    -webkit-filter: drop-shadow(2px 2px 1px #202020);
   
+}
+
+.bold-txt {
+  font-weight: bold;
+}
+
+/* RADIO STYLES */
+/* Link: https://doodlenerd.com/html-control/css-radio-button-generator */
+.control2 {
+  font-family: arial;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  padding-top: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+  .control2 input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+  }
+.control2_indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #c7c7c7;
+  border: 0px solid #000000;
+  border-radius: undefinedpx;
+}
+.control2:hover input ~ .control2_indicator,
+.control2 input:focus ~ .control2_indicator {
+  background: #3c3c3c;
+}
+
+.control2 input:checked ~ .control2_indicator {
+  background: #202020;
+}
+.control2:hover input:not([disabled]):checked ~ .control2_indicator,
+.control2 input:checked:focus ~ .control2_indicator {
+  background: #3c3c3c;
+}
+.control2 input:disabled ~ .control2_indicator {
+  background: #e6e6e6;
+  opacity: 1;
+  pointer-events: none;
+}
+.control2_indicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control2 input:checked ~ .control2_indicator:after {
+  display: block;
+}
+.control2-radio .control2_indicator {
+  border-radius: 50%;
+}
+
+.control2-radio .control2_indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+
+}
+.control2-radio input:disabled ~ .control2_indicator:after {
+  background: #7b7b7b;
+}.control2-radio .control2_indicator::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-left: -1.3rem;
+  margin-top: -1.3rem;
+  background: #E6D2A1;
+  border-radius: 3rem;
+  opacity: 0.6;
+  z-index: 99999;
+  transform: scale(0);
+}
+@keyframes s-ripple {
+  0% {
+      opacity: 0;
+      transform: scale(0);
+  }
+  20% {
+      transform: scale(1);
+  }
+  100% {
+      opacity: 0.01;
+      transform: scale(1);
+  }
+}
+@keyframes s-ripple-dup {
+ 0% {
+     transform: scale(0);
+  }
+ 30% {
+      transform: scale(1);
+  }
+  60% {
+      transform: scale(1);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(1);
+  }
+}
+.control2-radio input + .control2_indicator::before {
+  animation: s-ripple 250ms ease-out;
+}
+.control2-radio input:checked + .control2_indicator::before {
+  animation-name: s-ripple-dup;
 }
