@@ -103,15 +103,6 @@ function selectedItems(){
 		
 }
 
-// From: https://www.w3schools.com/jsref/dom_obj_image.asp
-function changeit(option) {
-
-	console.log(option);
-	if (option === "salade")
-	  document.getElementById("imgselect").setAttribute("src", "https://druxys.com/wp-content/uploads/2016/11/SaladThumb-GardenSalad.png");
-  
-}
-
 //Helper function to pick correct image for checklist 
 function getPic(prod) {
 	var img;
