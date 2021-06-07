@@ -159,7 +159,7 @@ function isNoneChecked() {
 	var checkBox = document.getElementById("None");
   
 	// If the checkbox is checked, execute code
-	if (checkBox.checked == true){
+	if (checkBox.checked){
 		document.getElementById("Vegetarian").disabled = true;
 		document.getElementById("GlutenFree").disabled = true;
 		document.getElementById("Nut").disabled = true;
