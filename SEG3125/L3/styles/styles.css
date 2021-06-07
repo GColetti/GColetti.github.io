@@ -10,6 +10,13 @@
   background-color: #3C3C3C;
 }
 
+.welcome-msg{
+  font-family: inherit;
+  font-weight: 200;
+  color: white;
+  margin-left: 25px;
+}
+
 /* Style the tab */
 .tab {
     filter: drop-shadow(2px 2px 1px #202020);
@@ -231,39 +238,46 @@
   right: 0;
 }
 
+
+
+
 /* FOOTER STYLES */
+.footer-con {
+  margin: 0 auto;
+}
+
 .footer {
   clear: both;
-  height: 75px;
-  position: fixed;
-  width: 100%;
-  left: 0;
-  bottom: 0;
+  height: 55px;
+  position: relative;
+  margin-top: 450px;
+  width: 50px;
   padding-left: 5px;
-  display: block;
-  margin-top: -10px;
-  margin-left: 65px;
+  display: inline-block;
   font-size: x-large;
   font-weight: bold;
   color: white;
   font-family: inherit;
-  text-align: center;
+  text-align: left;
+
 }
 
+
 .footer-alt {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: relative;
+  height: 55px;
   clear: both;
-  display: block;
-  width: 90%;
-  height: 75px;
-  padding-top: 10px;
+  bottom: 0;
+  margin-bottom: 10px;
+  margin-top: 450px;
+  display: inline-block;
+  width: 50%;
   font-size: x-large;
   font-weight: lighter;
   color: white;
   font-family: inherit;
-  text-align: center;
+  text-align: right;
+
 }
 
 .row {
@@ -560,7 +574,7 @@
 }
 
 .dropdown {
-  position: relative;
+  position: absolute;
 }
 
 .dropdown-content {
