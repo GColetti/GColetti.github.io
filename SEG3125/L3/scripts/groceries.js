@@ -196,7 +196,7 @@ function areOthersChecked() {
 // Toast notifcation code (from w3schools link) and adapted for website
 // https://www.w3schools.com/howto/howto_js_snackbar.asp
 function toastAlert() {
-	if (chosenProductsArr.length < 1){
+	if (!cartReady){
 		// Get the snackbar DIV
 		var x = document.getElementById("snackbar-fail");
 

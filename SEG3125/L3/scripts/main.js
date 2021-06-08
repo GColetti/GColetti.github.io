@@ -74,7 +74,7 @@ function populateListProductChoices(slct1, slct2) {
 // The purpose is to build the HTML to be displayed (a Paragraph) 
 // We build a paragraph to contain the list of selected items, and the total price
 var chosenProductsArr = [];
-var cartReady = false;
+var cartReady;
 
 function selectedItems(){
 	
@@ -94,16 +94,19 @@ function selectedItems(){
 			para.appendChild(document.createTextNode(ele[i].value));
 			para.appendChild(document.createElement("br"));
 			chosenProducts.push(ele[i].value);
-			chosenProductsArr.push(ele[i].value);
+			chosenProductsArr.push(ele[i].value);	
 		}
 	}
 		
 	// Add paragraph and total price
 	c.appendChild(para);
 	c.appendChild(document.createTextNode("Cart Total is $" + getTotalPrice(chosenProducts)));
-	// Notify that items are in cart (ready for checkout)
-	cartReady = true;
-		
+
+	if (chosenProducts.length < 1){
+		cartReady = false;
+	} else{
+		cartReady = true;
+	}
 }
 
 //Helper function to pick correct image for checklist 
