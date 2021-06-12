@@ -5290,3 +5290,10 @@ a.credit {
 /* Common Style */
 .section {
   padding-bottom: 0; }
+
+.back-btn:hover {
+  background-color: rgba(53, 74, 157, 0.75);
+  border-radius: 3px;
+  color: white;
+  transition: 0.5s;
+}
