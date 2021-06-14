@@ -4993,3 +4993,28 @@
 
 })));
 //# sourceMappingURL=bootstrap.js.map
+
+function showAlert(){
+
+  // Trigger button
+  let button = document.querySelector("#alert-btn");
+
+  // Alert container
+  let container = document.querySelector("#cont");
+
+  // Create click event listener on trigger button
+  button.addEventListener("click", () => {
+
+    // When user click on trigger #button, insert .alert element into #container
+    container.innerHTML =
+      `<div class="alert alert-success alert-dismissible fade show" id="alertSucc" role="alert" style="display:none;">
+      <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+      <div>
+          <strong>Success!</strong> Appointment has been successfully booked!
+        </div>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>`
+    ;
+  });
+
+}

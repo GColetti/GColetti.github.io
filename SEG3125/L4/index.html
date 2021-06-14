@@ -22,7 +22,7 @@ This will help you get started with your code!
 I store all of the page information in a container,
 Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
 -->
-<div class = "container-fluid bg-dark">
+<div id="cont" class = "container-fluid bg-dark">
 
     <!--
     Most websites now feature what is called a NavBar.
@@ -33,7 +33,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     <nav class="navbar bg-dark text-white p-3">
         <img src="images/uo-logo.png" width="15%" height="15%">
         <div class="jumbotron-fluid">
-            <h1 class="display-4">uOttawa Physiotherapy</h1>
+            <h1 class="display-4"><strong>uOttawa Physiotherapy</strong></h1>
             <hr class="my-4">
             <p>Physiotherapy aims to improve mobility and strength, relieve pain, and to restore physical function. This enables you to resume your regular activities of daily living including work, school, recreational activities and personal care.</p>
             <p class="lead">
@@ -56,8 +56,11 @@ Many websites will use what is called CSS grid layouts, where you will have a he
               <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="#experts">Experts</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#book">Book</a>
-              </li>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="#FAQ">FAQ</a>
             </li>
@@ -87,34 +90,40 @@ Many websites will use what is called CSS grid layouts, where you will have a he
             <th scope="col"><h4>#</h4></th>
             <th scope="col"><h4>Service</h4></th>
             <th scope="col"><h4>Description</h4></th>
+            <th scope="col"><h4>Expert</h4></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Acupuncture & Dry Needling</td>
-            <td>Otto</td>
+            <td class="txt-small">Acupuncture & Dry Needling</td>
+            <td class="txt-small">A system of integrative medicine that involves pricking the skin or tissues with needles, used to alleviate pain and to treat various physical, mental, and emotional conditions.</td>
+            <td class="txt-small">Jessica</td>
             
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>Massage Therapy</td>
-            <td>Thornton</td>
+            <td class="txt-small">Massage Therapy</td>
+            <td class="txt-small">Massage therapy is the manipulation of the soft tissues of the body, consisting primarily of manual (hands-on) techniques such as applying fixed or movable pressure, holding, and moving muscles and body tissues.</td>
+            <td class="txt-small">Joe, Jessica</td>
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td>Chiropractic</td>
-            <td>the Bird</td>
+            <td class="txt-small">Chiropractic</td>
+            <td class="txt-small">Adjustment or manipulation of the spine and other body parts to get them in the right position, or proper alignment.</td>
+            <td class="txt-small">Joe</td>
           </tr>
           <tr>
             <th scope="row">4</th>
-            <td>Rehab</td>
-            <td>the Bird</td>
+            <td class="txt-small">Rehab</td>
+            <td class="txt-small">Helps to restore movement and function when someone is affected by injury, illness or disability.</td>
+            <td class="txt-small">Amy</td>
           </tr>
           <tr>
             <th scope="row">5</th>
-            <td>Shockwave Therapy</td>
-            <td>the Bird</td>
+            <td class="txt-small">Shockwave Therapy</td>
+            <td class="txt-small">Shockwave therapy is a multidisciplinary device used in orthopaedics, physiotherapy, sports medicine, urology and veterinary medicine. Its main assets are fast pain relief and mobility restoration.</td>
+            <td class="txt-small">Amy</td>
           </tr>
         </tbody>
     </table>
@@ -139,33 +148,76 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     <button type="button" class="btn btn-warning active">Active Button</button>
     <button type="button" class="btn btn-warning" disabled>Disabled Button</button> -->
 
-    <!-- Book Services -->
-    <h1 class="p-2 text-white" id="book">Book Your Appointment</h1>
+    <!-- Cards are quite useful when building a website. They are a useful way to organize information.
+    They can be organized using a CSS grid or other layout options.
+    https://getbootstrap.com/docs/5.0/components/card/
+    -->
 
-    <select class="form-select my-3" aria-label="Default select example">
-        <option selected>Choose Service</option>
-        <option value="1">Acupuncture & Dry Needling</option>
-        <option value="2">Massage Therapy</option>
-        <option value="3">Chiropractic</option>
-        <option value="4">Rehab</option>
-        <option value="5">Shockwave Therapy</option>
-    </select>
+    <h1 id="experts" class= "p-2 text-white">Meet Our Experts</h1>
+    <div class="row justify-content-around">
+        <div class="card" style="width: 18rem;">
+            <img src="images/expert-1.jpg" class="card-img-top p-2" alt="...">
+            <div class="card-body">
+                <p class="card-text"><strong>Joe</strong></p>
+                <p class="card-text"><strong>Expertise:</strong> Chiropractic, Massage Therapy</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="images/expert-2.jpg" class="card-img-top p-2" alt="...">
+            <div class="card-body">
+                <p class="card-text"><strong>Amy</strong></p>
+                <p class="card-text"><strong>Expertise:</strong> Rehab, Shockwave Therapy</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">    
+            <img src="images/expert-3.png" class="card-img-top p-2" alt="...">
+            <div class="card-body">
+                <p class="card-text"><strong>Jessica</strong></p>
+                <p class="card-text"><strong>Expertise:</strong> Acupuncture, Massage Therapy</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book Services -->
+    <h1 class="p-2 text-white" id="book" style="margin-top: 25px;">Book Your Appointment</h1>
 
     <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1"><i class="fa fa-address-card"></i></span>
+        <label class="input-group-text" for="inputGroupSelect01"><i class="fa fa-lg fa-user-md"></i></label>
+        <select class="form-select" id="inputGroupSelect01">
+            <option selected>Choose Service</option>
+            <option value="1">Acupuncture & Dry Needling</option>
+            <option value="2">Massage Therapy</option>
+            <option value="3">Chiropractic</option>
+            <option value="4">Rehab</option>
+            <option value="5">Shockwave Therapy</option>
+        </select>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="fa fa-lg fa-address-card"></i></span>
         <input type="text" class="form-control" placeholder="Full Name" aria-label="Name" aria-describedby="basic-addon1">
     </div>
 
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="fa fa-lg fa-phone" aria-hidden="true"></i></i></span>
+        <input type="text" class="form-control" placeholder="Phone Number" aria-label="phone" aria-describedby="basic-addon1">
+    </div>
 
-    <h1 class= "p-2 text-white">Modal Example</h1>
+    <div class="input-group mb-3"> 
+        <label for="meeting-time" style="color: white; margin-right: 10px;">Choose a date and time for your appointment:</label>
+
+        <input style="padding: 5px;" type="datetime-local" id="meeting-time"
+            name="meeting-time" value="2021-06-14T06:00"
+            min="2021-06-14T00:00" max="2022-06-30T00:00">
+    </div>
 
     <!-- Button trigger modal
     We use the same button code from above, but now we can trigger a modal to appear.
     The bootstrap tutorial includes many different types of modals that you can explore
     https://getbootstrap.com/docs/5.0/components/modal/
     -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
+    <button type="button" class="btn btn-outline-primary" aria-pressed="false" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Book Appointment
     </button>
 
     <!-- Modal -->
@@ -173,54 +225,35 @@ Many websites will use what is called CSS grid layouts, where you will have a he
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Appointment Confirmation</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    In the body we can add various components. In this example some radio buttons
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Yes
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
-                            No
-                        </label>
-                    </div>
+                    Are you sure you would like to book this appointment?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" id="confirm" class="btn btn-primary" onclick="showAlert()" data-bs-dismiss="modal">Confirm</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Cards are quite useful when building a website. They are a useful way to organize information.
-    They can be organized using a CSS grid or other layout options.
-    https://getbootstrap.com/docs/5.0/components/card/
-    -->
+    <!-- ALERT -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+        </symbol>
+    </svg>
 
-    <br>
-    <h1 class= "p-2 text-white">Meet Our Physicians</h1>
-    <div class="row justify-content-around">
-        <div class="card" style="width: 18rem;">
-            <img src="images/doctor.jpg" class="card-img-top p-2" alt="...">
-            <div class="card-body">
-                <p class="card-text">Here is some filler text, in here you can describe your doctor</p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="images/doctor.jpg" class="card-img-top p-2" alt="...">
-            <div class="card-body">
-                <p class="card-text">Here is some filler text, in here you can describe your doctor</p>
-            </div>
-        </div>
+    <div class="alert alert-success alert-dismissible fade" id="alertSucc" role="alert" style="display:none;">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+        <div>
+            <strong>Success!</strong> Appointment has been successfully booked!
+          </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-
+    
     <!--
     We can also use buttons to expand some hidden options
     https://getbootstrap.com/docs/5.0/components/collapse/
@@ -228,13 +261,13 @@ Many websites will use what is called CSS grid layouts, where you will have a he
 
     <h1 class= "p-2 text-white">Frequently Asked Questions</h1>
 
-    <button class="btn btn-primary" id="FAQ" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        Button To Expand Options
+    <button class="btn btn-outline-primary" id="FAQ" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Help
     </button>
 
     <div class="collapse" id="collapseExample">
         <div class="card card-body">
-            Here we have some hidden data to avoid cluttering the page with information
+            Click on each of the FAQ below to learn more about us.
         </div>
     </div>
 
@@ -242,35 +275,35 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     https://getbootstrap.com/docs/5.0/components/accordion/
     -->
 
-    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion accordion-flush" id="accordionFlushExample" style="margin-top: 25px;">
         <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    Accordion Item #1
+                    Where can I book my appointment?
                 </button>
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">I can put information in this area</div>
+                <div class="accordion-body">Booking is done through our site and can be found <a href="#book">here</a>.</div>
             </div>
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Accordion Item #2
+                    How many services do you offer?
                 </button>
             </h2>
             <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">I can put information in this area</div>
+                <div class="accordion-body">Currently, we offer 5 physiotherapy services. Click <a href="#services">here</a> to view our services.</div>
             </div>
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Accordion Item #3
+                    Where are you located?
                 </button>
             </h2>
             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">I can place information in this area</div>
+                <div class="accordion-body">We're located on the University of Ottawa's campus at <strong> 75 Laurier Ave. E Ottawa, ON K1N 6N5</strong> </div>
             </div>
         </div>
     </div>
@@ -323,11 +356,11 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     </div>
     <!-- Grid container -->
   
-    <!-- Copyright -->
+    <!-- Footer -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      <p class="text-white">Website Designed by GCole</p>
+      <p class="text-white" style="font-weight: lighter;">Website Designed by <strong>GCole</strong></p>
     </div>
-    <!-- Copyright -->
+    <!-- Footer -->
 </footer>
 
 <!-- here we input our Javascript helper -->
