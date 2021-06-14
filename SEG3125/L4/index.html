@@ -31,20 +31,19 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     -->
 
     <nav class="navbar bg-dark text-white p-3">
-        <img src="images/uo-logo.png" width="20%" height="20%">
+        <img src="images/uo-logo.png" width="15%" height="15%">
         <div class="jumbotron-fluid">
             <h1 class="display-4">uOttawa Physiotherapy</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
             <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <p>Physiotherapy aims to improve mobility and strength, relieve pain, and to restore physical function. This enables you to resume your regular activities of daily living including work, school, recreational activities and personal care.</p>
             <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#about" role="button">Learn more</a>
+                <a class="btn btn-outline-light btn-lg" href="#about" role="button">Learn more</a>
             </p>
         </div>  
     </nav>
 
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Home</a>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" style="font-size: 20px;">
+        <a class="navbar-brand" href="#"><i class="fa fa-home"></i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -57,51 +56,66 @@ Many websites will use what is called CSS grid layouts, where you will have a he
               <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="#book">Book</a>
+              </li>
+            <li class="nav-item">
               <a class="nav-link" href="#FAQ">FAQ</a>
             </li>
           </ul>
         </div>
     </nav>
 
-    <div class=" p-3 my-3 border bg-light" id="about">
+    <div class="p-3 my-3 border bg-light rounded" id="about">
         <h1 class=""> About Us</h1>
-        <p class="p-4 my-3" style="font-size: 25px">We are located at:<strong> 
-            <br> 75 Laurier Ave. E <br> Ottawa, ON K1N 6N5</strong>
-        <p style="font-size: 20px; padding-left: 1.5rem">Our goal is to help the well being of every student on campus.</p>
+        <p style="font-size: 20px; ">State of the art physiotherapy treatment clinic located in University of Ottawa's campus designed to help students maintain good health.</p>
+        <p style="font-size: 20px; padding-left: 1.5rem"> "Our goal is to help the well being of every student on campus to ensure a healthy lifestyle."</p>
+
+        <p class="p-1 my-3" style="font-size: 20px">Come visit us at:<strong> 
+            <br> 75 Laurier Ave. E <br> Ottawa, ON  K1N 6N5</strong>
     </div>
     <!--
     Tables are one of many ways to organize information easily.
     It is a good way to list of prices, or services in a business website
     https://getbootstrap.com/docs/5.0/content/tables/
     -->
-    <table class="table table-info table-hover" id="services">
+
+    <h1 class= "p-2 text-white" id="services">Our Services</h1>
+    
+    <table class="table table-light table-hover">
         <thead>
-            <tr>
-                <th scope="col"><h3>Service</h3></th>
-                <th scope="col"><h3>Description</h3></th>
-            </tr>
+          <tr>
+            <th scope="col"><h4>#</h4></th>
+            <th scope="col"><h4>Service</h4></th>
+            <th scope="col"><h4>Description</h4></th>
+          </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Acupuncture & Dry Needling</td>
-                <td>Placeholder 2</td>
-            </tr>
-            <tr>
-                <td>Massage Therapy</td>
-                <td>Placeholder 2</td>
-            </tr>
-            <tr>
-                <td>Chiropractic</td>
-                <td>Placeholder 2</td>
-            </tr>
-            <tr>
-                <td>Rehab</td>
-                <td>Placeholder 2</td>
-            </tr>
-            <tr>
-                <td>Shockwave Therapy</td>
-                <td>Placeholder 2</td>
-            </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Acupuncture & Dry Needling</td>
+            <td>Otto</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Massage Therapy</td>
+            <td>Thornton</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Chiropractic</td>
+            <td>the Bird</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Rehab</td>
+            <td>the Bird</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Shockwave Therapy</td>
+            <td>the Bird</td>
+          </tr>
         </tbody>
     </table>
 
@@ -115,17 +129,35 @@ Many websites will use what is called CSS grid layouts, where you will have a he
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div> -->
 
-    <h1>Button States</h1>
+    <!-- <h1 class= "p-2 text-white">Button States</h1> -->
     <!--
     Buttons can be used for submitting forms, triggering events among many other things.
     https://getbootstrap.com/docs/5.0/components/buttons/
     -->
 
-    <button type="button" class="btn btn-warning">Primary Button</button>
+    <!-- <button type="button" class="btn btn-warning">Primary Button</button>
     <button type="button" class="btn btn-warning active">Active Button</button>
-    <button type="button" class="btn btn-warning" disabled>Disabled Button</button>
+    <button type="button" class="btn btn-warning" disabled>Disabled Button</button> -->
 
-    <h1>Modal Example</h1>
+    <!-- Book Services -->
+    <h1 class="p-2 text-white" id="book">Book Your Appointment</h1>
+
+    <select class="form-select my-3" aria-label="Default select example">
+        <option selected>Choose Service</option>
+        <option value="1">Acupuncture & Dry Needling</option>
+        <option value="2">Massage Therapy</option>
+        <option value="3">Chiropractic</option>
+        <option value="4">Rehab</option>
+        <option value="5">Shockwave Therapy</option>
+    </select>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="fa fa-address-card"></i></span>
+        <input type="text" class="form-control" placeholder="Full Name" aria-label="Name" aria-describedby="basic-addon1">
+    </div>
+
+
+    <h1 class= "p-2 text-white">Modal Example</h1>
 
     <!-- Button trigger modal
     We use the same button code from above, but now we can trigger a modal to appear.
@@ -173,16 +205,16 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     -->
 
     <br>
-    <h1>Meet Our Physicians</h1>
+    <h1 class= "p-2 text-white">Meet Our Physicians</h1>
     <div class="row justify-content-around">
         <div class="card" style="width: 18rem;">
-            <img src="images/doctor.jpg" class="card-img-top" alt="...">
+            <img src="images/doctor.jpg" class="card-img-top p-2" alt="...">
             <div class="card-body">
                 <p class="card-text">Here is some filler text, in here you can describe your doctor</p>
             </div>
         </div>
         <div class="card" style="width: 18rem;">
-            <img src="images/doctor.jpg" class="card-img-top" alt="...">
+            <img src="images/doctor.jpg" class="card-img-top p-2" alt="...">
             <div class="card-body">
                 <p class="card-text">Here is some filler text, in here you can describe your doctor</p>
             </div>
@@ -193,8 +225,8 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     We can also use buttons to expand some hidden options
     https://getbootstrap.com/docs/5.0/components/collapse/
     -->
-    <br>
-    <h1>Frequently Asked Questions</h1>
+
+    <h1 class= "p-2 text-white">Frequently Asked Questions</h1>
 
     <button class="btn btn-primary" id="FAQ" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
         Button To Expand Options
