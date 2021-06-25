@@ -1,0 +1,59 @@
+td{
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+}
+
+.btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar{
+    padding: 10px;
+}
+
+/* Changed primary button colour */
+/* Adapted from: https://stackoverflow.com/questions/28261287/how-to-change-btn-color-in-bootstrap */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #AE3534;
+    border-color: #AE3534;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-outline-primary,
+.btn-outline-primary:active,
+.btn-outline-primary:visited,
+.btn-outline-primary:focus {
+    border-color: #AE3534;
+    color: #AE3534;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-outline-primary:hover {
+    background-color: #AE3534;
+    border-color: #AE3534;
+    color: white;
+}
+
+.txt-small{
+    font-size: 18px;
+}
+
+.panel-body {background-color:#AE3534 !important;}
+
+.container {
+    max-width: 100%;
+    color: white;
+  }
+  
+  .lh-condensed { 
+      line-height: 1.25; 
+    }
