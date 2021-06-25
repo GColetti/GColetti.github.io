@@ -8,3 +8,4 @@ This repository is used for course work done in **SEG3125 - Analysis and Design 
  - [Lab 2: Construction of an Adaptive Online Grocery Site](http://gianlucacoletti.me/SEG3125/L2)
  - [Lab 3: Alternative for the Adaptive Online Grocery Site](http://gianlucacoletti.me/SEG3125/L3)
  - [Lab 4: Design of a Health Service Site Using Design Guidelines](http://gianlucacoletti.me/SEG3125/L4)
+ - [Lab 5/6: Enhancement of a Health Service Site](http://gianlucacoletti.me/SEG3125/L6)
