@@ -52,9 +52,6 @@ function disableDates(date) {
     return [ unavailableDates.indexOf(string) === -1 ]
 }
 
-
-
-
 // HERE, JQuery "LISTENING" starts
 $(document).ready(function(){
 
@@ -119,8 +116,10 @@ $(document).ready(function(){
     $('#info').submit();
     });
 
-    $('.datepicker').datepicker({
-        daysOfWeekDisabled: [0,6]
+    $(function () {
+        $('#meeting-time').datetimepicker({
+            daysOfWeekDisabled: [0,6]
+        });
     });
 });
 
