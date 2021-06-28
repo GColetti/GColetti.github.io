@@ -222,14 +222,15 @@ Many websites will use what is called CSS grid layouts, where you will have a he
 
     <!-- CALENDAR INPUT -->  
     <!-- Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local -->
+    
     <div class="input-group mb-3"> 
         <label for="meeting-time" style="font-weight: bold; color: white; margin-right: 10px;">Choose a date and time for your appointment:</label>
+        <p>Date: <input type="text" id="dateInput"></p>
 
         <input style="padding: 5px;" type="datetime-local" id="meeting-time"
             name="meeting-time" value="2021-06-14T06:00"
             min="2021-06-14T00:00"> 
     </div>
-
     <h1 class="p-2 text-white" id="book" style="margin-top: 25px; text-align: left;">Checkout</h1>
     
     <!-- CHECKOUT FORM 
@@ -277,7 +278,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                       <div class="col-md-5 mb-3">
                           <label for="country">Country</label>
                           <select class="custom-select d-block w-100" id="country" required="">
-                              <option value="">Choose...</option>
+                              <option value="">Choose country</option>
                               <option>Canada</option>
                           </select>
                           <div class="invalid-feedback"> Please select a valid country. </div>
@@ -285,7 +286,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                       <div class="col-md-4 mb-3">
                           <label for="state">Province</label>
                           <select class="custom-select d-block w-100" id="state" required="">
-                              <option value="">Choose...</option>
+                              <option value="">Choose province</option>
                               <option>Ontario</option>
                               <option>Québec</option>
                           </select>

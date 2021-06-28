@@ -5,18 +5,6 @@
 // https://flaviocopes.com/javascript-regular-expressions/
 // Regular expressions can get complex, you can think in terms of a series of characters
 // or numbers
-function validatePhone(txtPhone) {
-    var a = document.getElementById(txtPhone).value;
-    // This filter asks for something like (12345), so parentheses with any number (at least 1)
-    // of digits
-    var filter = /^(\([-+]?[0-9]+)\)$/;
-    if (filter.test(a)) {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
@@ -83,7 +71,6 @@ $(document).ready(function(){
             dateFormat: setDateFormat,
             // no calendar before June 1st 2020
             minDate: new Date('06/01/2020'),
-            maxDate: '+4M',
             // used to disable some dates
             beforeShowDay: $.datepicker.noWeekends,
             beforeShowDay: disableDates
@@ -114,12 +101,6 @@ $(document).ready(function(){
     //CONFIRM APPNT 
     $('#confirm').click(function(){
     $('#info').submit();
-    });
-
-    $(function () {
-        $('#meeting-time').datetimepicker({
-            daysOfWeekDisabled: [0,6]
-        });
     });
 });
 
