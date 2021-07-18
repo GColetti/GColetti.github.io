@@ -72,10 +72,6 @@ function App() {
       </Card>
 
       {/* JOIN */}
-      
-
-      
-
       <Card
         bg="dark"
         text= "white"
