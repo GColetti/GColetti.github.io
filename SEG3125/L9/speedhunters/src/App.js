@@ -35,7 +35,7 @@ function App() {
       <header className="App-header">
       
       {/* NAVBAR */}
-      <Navbar className = "mb-4" bg="dark" variant="dark">
+      <Navbar className = "mb-3" bg="dark" variant="dark">
         <Container fluid>
         <Navbar.Brand href="#home"><img className = "navbar-brand"
             src={logo}
@@ -60,7 +60,7 @@ function App() {
       </Navbar>
 
 
-      <Card className = "mb-5" style={{ width: '40rem' }}>
+      <Card className = "mb-5 mt-5" style={{ width: '40rem' }}>
         <Card.Img variant="top" src={shlogo}/>
         <Card.Body>
           <Card.Title><large>WELCOME TO SPEEDHUNTERS</large></Card.Title>
@@ -76,8 +76,8 @@ function App() {
       <Card
         bg="dark"
         text= "white"
-        style={{ width: '86rem' }}
-        className="mb-2"
+        style={{ width: '86rem'}}
+        className="mb-3"
       >
         <Card.Header className = "align-self-start" >JOIN THE CREW &gt; </Card.Header>
         <Card.Body>
