@@ -27,6 +27,7 @@ import { IoCarSportOutline } from 'react-icons/io5';
 import { IoLocationOutline } from 'react-icons/io5';
 import { IoSpeedometerOutline } from 'react-icons/io5';
 import { IoHomeOutline } from 'react-icons/io5';
+import { IoWaterOutline } from 'react-icons/io5';
 
 function App() {
   return (
@@ -78,7 +79,7 @@ function App() {
         style={{ width: '86rem' }}
         className="mb-2"
       >
-        <Card.Header className = "align-self-start" >JOIN THE CREW > </Card.Header>
+        <Card.Header className = "align-self-start" >JOIN THE CREW &gt; </Card.Header>
         <Card.Body>
           <Row className="g-2">
             <Col md>
@@ -92,6 +93,20 @@ function App() {
             </Form.Group>
             </Col>
           </Row>
+          
+          <Container className = "mb-3">
+            <Form.Check aria-label="age" label= "Confirm you are at least 18 years of age" />
+          </Container>
+          
+          <Form.Label htmlFor="exampleColorInput"><IoWaterOutline/>CHOOSE YOUR CAR'S COLOR</Form.Label>
+          <Container className = "w-25 align-self-start">
+          <Form.Control
+            type="color"
+            id="exampleColorInput"
+            defaultValue="#563d7D"
+            title="Choose color"
+          />
+        </Container>
         </Card.Body>
       </Card>
       
