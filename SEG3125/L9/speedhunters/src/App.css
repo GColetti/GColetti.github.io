@@ -66,3 +66,7 @@ hr {
   color: #34B8FF;
   border: solid 1px #34B8FF;
 }
+
+.thumbnail-border {
+  border-color: "#34B8FF";
+}
