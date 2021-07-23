@@ -41,12 +41,12 @@ function App() {
       <header className="App-header">
       
       {/* NAVBAR */}
-      <Navbar className = "mb-3" bg="dark" variant="dark">
+      <Navbar className = "m-1" bg="dark" variant="dark">
         <Container>
         <Navbar.Brand href="/home"><img className = "navbar-brand"
             src={logo}
             width="70"
-            height="55"
+            height="65"
             className="d-inline-block align-top"
             alt = "logo"
         /></Navbar.Brand>
@@ -112,7 +112,7 @@ function App() {
             <Form.Check aria-label="age" label= "Confirm you are at least 18 years of age" />
 
             <Row className="g-2">
-          <Form.Label> Select Car</Form.Label>
+          <Form.Label><IoCarSportOutline/> Select Car</Form.Label>
             <Col md>
                 <Form.Group className="mb-3" controlId="formYear">
                   <Form.Control type="year" placeholder="YEAR" />
@@ -137,7 +137,7 @@ function App() {
           <Form.Control
             type="color"
             id="exampleColorInput"
-            defaultValue="#563d7D"
+            defaultValue="#34B8FF"
             title="Choose color"
           />
         </Container>
