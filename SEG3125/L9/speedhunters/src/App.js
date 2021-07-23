@@ -10,6 +10,7 @@ import about3 from './images/about3.jpeg';
 
 //Bootstrap imports
 import { Navbar } from 'react-bootstrap';
+import Toast from 'react-bootstrap/Toast'
 import { Nav } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
@@ -57,8 +58,8 @@ function App() {
         </Nav>
 
         <DropdownButton variant="primary" id="dropdown-basic-button" title="SELECT LANGUAGE">
-          <Dropdown.Item href={`http://gianlucacoletti.me/SEG3125/L8`}>ENGLISH</Dropdown.Item>
-          <Dropdown.Item href={`http://gianlucacoletti.me/SEG3125/L8`}>FRENCH</Dropdown.Item>
+          <Dropdown.Item href="#" >ENGLISH</Dropdown.Item>
+          <Dropdown.Item href="#" >FRENCH</Dropdown.Item>
         </DropdownButton>
 
         </Container>
@@ -73,7 +74,7 @@ function App() {
           <Card.Text >
             <small>CALLING ALL CAR ENTHUSIASTS, JOIN US FOR THE RIDE.</small>
           </Card.Text>
-          <Button variant="outline-primary">JOIN US</Button>
+          <Button href ="/join" variant="outline-primary">JOIN US</Button>
 
         </Card.Body>
       </Card>
@@ -119,7 +120,7 @@ function App() {
             </Col>
             <Col md>
               <Form.Group className="mb-3" controlId="formMake">
-                <Form.Control type="make" placeholder="MAKE" />
+                <Form.Control require = "" type="make" placeholder="MAKE" />
               </Form.Group>
             </Col>
 
@@ -167,7 +168,7 @@ function App() {
           </Form.Group>
 
           <Button variant="outline-primary">CONFIRM</Button>
-          
+
         
         </Card.Body>
       </Card>
