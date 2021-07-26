@@ -45,23 +45,23 @@ responses:
   - text: |
       Bye!
   - text: |
-      Goodbye.
+      Goodbye!
   - text: |
-      Fairwell.
+      Fairwell!
   utter_understanding:
   - text: |
       No problem!
   - text: |
-      Understood
+      Understood.
   - text: |
       All good!
   utter_welcome:
   - text: |
       No problem!
   - text: |
-      You're welcome
+      You're welcome!
   - text: |
-      My pleasure
+      My pleasure!
       
 actions:
 - '...'
@@ -78,3 +78,7 @@ forms:
     required_slots:
       email:
       - type: from_text
+  unsubscribe_form:
+      required_slots:
+        email:
+        - type: from_text

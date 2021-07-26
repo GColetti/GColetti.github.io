@@ -1,18 +1,16 @@
 nlu:
 - intent: greet
   examples: |
-    - Hi there!
-    - Hey!
+    - Hi there
+    - Hey
     - Hello
     - Good day
     - Good morning
 
 - intent: goodbye
   examples: |
-    - Goodbye!
-    - Bye!
-    - So long
-    - Ciao
+    - Goodbye
+    - Bye
 
 - intent: reason
   examples: |
@@ -23,8 +21,8 @@ nlu:
 
 - intent: thank
   examples: |
-    - Thanks!
-    - Thank you!
+    - Thanks
+    - Thank you
     - Thanks for your help
 
 - intent: subscribe

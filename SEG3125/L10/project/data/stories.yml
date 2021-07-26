@@ -16,11 +16,10 @@ stories:
    - intent: greet
    - action: utter_greet
    - intent: unsubscribe
-   - action: utter_ask_reason
-   - intent: reason
-   - action: utter_understanding
-   - action: utter_unsubscribed
+   - action: unsubscribe_form
+   - active_loop: unsubscribe_form
    - intent: thank
    - action: utter_welcome
    - intent: goodbye
    - action: utter_goodbye
+  

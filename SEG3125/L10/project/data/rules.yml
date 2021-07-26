@@ -13,8 +13,20 @@ rules:
    - active_loop: null
    - action: utter_subscribed
 
-#  - rule: activate unsubscribe form
-#    steps:
-#    - intent: unsubscribe
-#    - action: utter_unsubscribed
+ - rule: activate unsubscribe form
+   steps:
+   - intent: unsubscribe
+   - action: unsubscribe_form
+   - active_loop: unsubscribe_form
+
+ - rule: unsubmit form
+   condition:
+   - active_loop: unsubscribe_form
+   steps:
+   - action: unsubscribe_form
+   - active_loop: null
+   - action: utter_unsubscribed
+   - action: utter_ask_reason
+   - intent: reason
+   - action: utter_understanding
    

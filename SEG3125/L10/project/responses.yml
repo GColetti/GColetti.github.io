@@ -21,15 +21,14 @@ responses:
        - text: |
            Why would you like to unsubscribe with us today?
        - text: |
-           Could you provide a reason for unsubscribing?
-           
+           Could you provide a reason for unsubscribing?       
    utter_goodbye:
        - text: |
            Bye!
        - text: |
-           Goodbye.
+           Goodbye!
        - text: |
-           Fairwell.
+           Fairwell!
    utter_understanding:
        - text: |
            No problem!
@@ -41,6 +40,6 @@ responses:
        - text: |
            No problem!
        - text: |
-           You're welcome
+           You're welcome!
        - text: |
-           My pleasure
+           My pleasure!
