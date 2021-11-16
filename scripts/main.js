@@ -1,4 +1,16 @@
 // Add your javascript here
+$(window).scroll(function() {
+
+  if ($(this).scrollTop()>0)
+   {
+    document.getElementById("return").style.visibility = "visible";
+   }
+  else
+   {
+    document.getElementById("return").style.visibility = "hidden";
+   }
+});
+
 // Don't forget to add it into respective layouts where this js file is needed
 
 $(document).ready(function() {
@@ -41,3 +53,5 @@ $('a.smooth-scroll')
     }
   }
 });
+
+
