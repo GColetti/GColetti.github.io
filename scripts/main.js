@@ -1,14 +1,13 @@
 // Add your javascript here
 $(window).scroll(function() {
-
-  if ($(this).scrollTop()>0)
+  if ($(this).scrollTop() > 0)
    {
-    document.getElementById("return").style.visibility = "visible";
-   }
+    $(document.getElementById("return")).fadeIn(250);
+  }
   else
    {
-    document.getElementById("return").style.visibility = "hidden";
-   }
+    $(document.getElementById("return")).fadeOut(1500);
+  }
 });
 
 // Don't forget to add it into respective layouts where this js file is needed
@@ -53,5 +52,3 @@ $('a.smooth-scroll')
     }
   }
 });
-
-
